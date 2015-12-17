@@ -13,76 +13,51 @@
 ## Mobile Applications with Android
  Course Schedule
 
-### 04 (Mon) January 2016
-| №   | Topic                                                      | Time          | Trainer |
-| --- | ---------------------------------------------------------- | ------------- | ------- |
-| 00  | Course Introduction                                        | 10:00 - 11:00 | Evlogi  |
-| 01  | Setup Java Environment                                     | 11:00 - 12:00 | Evlogi  |
-| 02  | Introduction to Java<br/>- Java Basics<br/>- OOP with Java | 14:00 - 18:00 | Evlogi  |
-
-### 05 (Tue) January 2016
-| №   | Topic                                                                    | Time          | Trainer |
-| --- | ------------------------------------------------------------------------ | ------------- | ------- |
-| 03  | Android Environment<br/>- Emulators<br/>- "Hello World" app with Android | 10:00 - 12:00 | Evlogi  |
-| 04  | Contexts in Android                                                      | 12:00 - 13:00 | Evlogi  |
-| 05  | Layouts                                                                  | 14:00 - 16:00 | Evlogi  |
-| 06  | Fragments                                                                | 16:00 - 18:00 | Evlogi  |
-
-### 06 (Wed) January 2016
-| №   | Topic                                                      | Time          | Trainer |
-| --- | ---------------------------------------------------------- | ------------- | ------- |
-| 07  | Views                                                      | 10:00 - 12:00 | Evlogi  |
-| 08  | Services                                                   | 12:00 - 14:00 | Evlogi  |
-|     | Free time for coding                                       | 14:00 - 18:00 |         |
-
-### 07 (Thu) January 2016
-| №   | Topic                                                      | Time          | Trainer |
-| --- | ---------------------------------------------------------- | ------------- | ------- |
-|     | Free time for coding                                       | 10:00 - 18:00 |         |
-| 09  | **Workshop**: UI /w Telerik components                     | 18:00 - 21:00 | Plamen  |
-
-### 08 (Fri) January 2016
-| №   | Topic                                                      | Time          | Trainer |
-| --- | ---------------------------------------------------------- | ------------- | ------- |
-|     | Free time for coding                                       | 10:00 - 16:00 |         |
-| 10  | Working with local data                                    | 16:00 - 18:00 | Evlogi  |
-| 11  | Using Notifications                                        | 18:00 - 20:00 | Plamen  |
-
-### 11 (Mon) January 2016
-| №   | Topic                                                      | Time          | Trainer |
-| --- | ---------------------------------------------------------- | ------------- | ------- |
-| 12  | Touch                                                      | 14:00 - 16:00 | Evlogi  |
-| 13  | Gestures                                                   | 16:00 - 18:00 | Evlogi  |
-| 14  | Animations                                                 | 18:00 - 22:00 | Plamen  |
-
-### 12 (Tue) January 2016
-| №   | Topic                                                      | Time          | Trainer |
-| --- | ---------------------------------------------------------- | ------------- | ------- |
-|     | Free time for coding                                       | 10:00 - 18:00 |         |
-| 15  | Multithreading                                             | 18:00 - 20:30 | Plamen  |
-| 16  | Using Telerik backend services                             | 20:30 - 22:00 | Plamen  |
-
-### 13 (Wed) January 2016
-| №   | Topic                                                      | Time          | Trainer |
-| --- | ---------------------------------------------------------- | ------------- | ------- |
-|     | Free time for coding                                       | 10:00 - 18:00 |         |
-| 17  | **Workshop**: Multithreading & Notifications               | 18:00 - 22:00 | Plamen  |
-
-### 14 (Thu) January 2016
-| №   | Topic                                                      | Time          | Trainer |
-| --- | ---------------------------------------------------------- | ------------- | ------- |
-|     | Free day for coding Team projects                          |               |         |
-
-### 15 (Fri) January 2016
-| №   | Topic                                                      | Time          | Trainer           |
-| --- | ---------------------------------------------------------- | ------------- | ----------------- |
-|     | Free time for coding                                       | 10:00 - 18:00 |                   |
-| 18  | **Workshop**: Help with Team Projects                      | 18:00 - 22:00 | Evlogi<br/>Plamen |
-
-### 18 (Mon) January 2016
-| №   | Topic                                                      | Time          | Trainer           |
-| --- | ---------------------------------------------------------- | ------------- | ----------------- |
-|     | Project defense                                            | 18:00 - 22:00 | Evlogi<br/>Plamen |
+<table>
+    <thead>
+        <tr><th>№</th><th>Topic</th><th>Time</th><th>Trainer</th></tr>
+    </thead>
+    <tbody>
+        <tr><td colspan="4"><h3><a id="user-content-05-tue-january-2016" class="anchor" href="#04-mon-january-2016" aria-hidden="true"><span class="octicon octicon-link"></span></a>04 (Mon) January 2016</h3></td></tr>
+        <tr><td>00</td><td>Course Introduction</td><td>10:00 - 11:00</td><td>Evlogi</td></tr>
+        <tr><td>01</td><td>Setup Java Environment</td><td>11:00 - 12:00</td><td>Evlogi</td></tr>
+        <tr><td>02</td><td>Introduction to Java<br>- Java Basics<br>- OOP with Java</td><td>14:00 - 18:00</td><td>Evlogi</td></tr>
+        <tr><td colspan="4"><h3><a id="user-content-05-tue-january-2016" class="anchor" href="#05-tue-january-2016" aria-hidden="true"><span class="octicon octicon-link"></span></a>05 (Tue) January 2016</h3></td></tr>
+        <tr><td>03</td><td>Android Environment<br>- Emulators<br>- "Hello World" app with Android</td><td>10:00 - 12:00</td><td>Evlogi</td></tr>
+        <tr><td>04</td><td>Contexts in Android</td><td>12:00 - 13:00</td><td>Evlogi</td></tr>
+        <tr><td>05</td><td>Layouts</td><td>14:00 - 16:00</td><td>Evlogi</td></tr>
+        <tr><td>06</td><td>Fragments</td><td>16:00 - 18:00</td><td>Evlogi</td></tr>
+        <tr><td colspan="4"><h3><a id="user-content-06-wed-january-2016" class="anchor" href="#06-wed-january-2016" aria-hidden="true"><span class="octicon octicon-link"></span></a>06 (Wed) January 2016</h3></td></tr>
+        <tr><td>07</td><td>Views</td><td>10:00 - 12:00</td><td>Evlogi</td></tr>
+        <tr><td>08</td><td>Services</td><td>12:00 - 14:00</td><td>Evlogi</td></tr>
+        <tr><td></td><td>Free time for coding</td><td>14:00 - 18:00</td><td></td></tr>
+        <tr><td colspan="4"><h3><a id="user-content-07-thu-january-2016" class="anchor" href="#07-thu-january-2016" aria-hidden="true"><span class="octicon octicon-link"></span></a>07 (Thu) January 2016</h3></td></tr>
+        <tr><td></td><td>Free time for coding</td><td>10:00 - 18:00</td><td></td></tr>
+        <tr><td>09</td><td><strong>Workshop</strong>: UI /w Telerik components</td><td>18:00 - 21:00</td><td>Plamen</td></tr>
+        <tr><td colspan="4"><h3><a id="user-content-08-fri-january-2016" class="anchor" href="#08-fri-january-2016" aria-hidden="true"><span class="octicon octicon-link"></span></a>08 (Fri) January 2016</h3></td></tr>
+        <tr><td></td><td>Free time for coding</td><td>10:00 - 16:00</td><td></td></tr>
+        <tr><td>10</td><td>Working with local data</td><td>16:00 - 18:00</td><td>Evlogi</td></tr>
+        <tr><td>11</td><td>Using Notifications</td><td>18:00 - 20:00</td><td>Plamen</td></tr>
+        <tr><td colspan="4"><h3><a id="user-content-11-mon-january-2016" class="anchor" href="#11-mon-january-2016" aria-hidden="true"><span class="octicon octicon-link"></span></a>11 (Mon) January 2016</h3></td></tr>
+        <tr><td>12</td><td>Touch</td><td>14:00 - 16:00</td><td>Evlogi</td></tr>
+        <tr><td>13</td><td>Gestures</td><td>16:00 - 18:00</td><td>Evlogi</td></tr>
+        <tr><td>14</td><td>Animations</td><td>18:00 - 22:00</td><td>Plamen</td></tr>
+        <tr><td colspan="4"><h3><a id="user-content-12-tue-january-2016" class="anchor" href="#12-tue-january-2016" aria-hidden="true"><span class="octicon octicon-link"></span></a>12 (Tue) January 2016</h3></td></tr>
+        <tr><td></td><td>Free time for coding</td><td>10:00 - 18:00</td><td></td></tr>
+        <tr><td>15</td><td>Multithreading</td><td>18:00 - 20:30</td><td>Plamen</td></tr>
+        <tr><td>16</td><td>Using Telerik backend services</td><td>20:30 - 22:00</td><td>Plamen</td></tr>
+        <tr><td colspan="4"><h3><a id="user-content-13-wed-january-2016" class="anchor" href="#13-wed-january-2016" aria-hidden="true"><span class="octicon octicon-link"></span></a>13 (Wed) January 2016</h3></td></tr>
+        <tr><td></td><td>Free time for coding</td><td>10:00 - 18:00</td><td></td></tr>
+        <tr><td>17</td><td><strong>Workshop</strong>: Multithreading &amp; Notifications</td><td>18:00 - 22:00</td><td>Plamen</td></tr>
+        <tr><td colspan="4"><h3><a id="user-content-14-thu-january-2016" class="anchor" href="#14-thu-january-2016" aria-hidden="true"><span class="octicon octicon-link"></span></a>14 (Thu) January 2016</h3></td></tr>
+        <tr><td></td><td>Free day for coding Team projects</td><td></td><td></td></tr>
+        <tr><td colspan="4"><h3><a id="user-content-15-fri-january-2016" class="anchor" href="#15-fri-january-2016" aria-hidden="true"><span class="octicon octicon-link"></span></a>15 (Fri) January 2016</h3></td></tr>
+        <tr><td></td><td>Free time for coding</td><td>10:00 - 18:00</td><td></td></tr>
+        <tr><td>18</td><td><strong>Workshop</strong>: Help with Team Projects</td><td>18:00 - 22:00</td><td>Evlogi<br>Plamen</td></tr>
+        <tr><td colspan="4"><h3><a id="user-content-18-mon-january-2016" class="anchor" href="#18-mon-january-2016" aria-hidden="true"><span class="octicon octicon-link"></span></a>18 (Mon) January 2016</h3></td></tr>
+        <tr><td></td><td>Project defense</td><td>18:00 - 22:00</td><td>Evlogi<br>Plamen</td></tr>
+    </tbody>
+</table>
 
 
 
