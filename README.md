@@ -32,18 +32,16 @@
         <tr><td>08</td><td><a href="https://github.com/TelerikAcademy/Mobile-Applications-for-Android/tree/master/08.%20Services">Services</a></td><td>12:00 - 13:00</td><td>Evlogi</td></tr>
         <tr><td></td><td>Free time for coding</td><td>13:00 - 18:00</td><td></td></tr>
         <tr><th colspan="4">07 (Thu) January 2016</th></tr>
-        <tr><td></td><td>Free time for coding</td><td>10:00 - 18:00</td><td></td></tr>
-        <tr><td>09</td><td><strong><a href="https://github.com/TelerikAcademy/Mobile-Applications-for-Android/tree/master/09.%20Workshop-UI-with-Telerik-components">Workshop</a></strong>: UI /w Telerik components</td><td>18:00 - 21:00</td><td>Plamen</td></tr>
+        <tr><td></td><td>Free time for coding</td><td>10:00 - 14:00</td><td></td></tr>
+        <tr><td>09</td><td><strong><a href="https://github.com/TelerikAcademy/Mobile-Applications-for-Android/tree/master/09.%20Workshop-UI-with-Telerik-components">Workshop</a></strong>: UI /w Telerik components</td><td>14:00 - 18:00</td><td>Evlogi</td></tr>
         <tr><th colspan="4">08 (Fri) January 2016</th></tr>
-        <tr><td></td><td>Free time for coding</td><td>10:00 - 16:00</td><td></td></tr>
-        <tr><td>10</td><td><a href="https://github.com/TelerikAcademy/Mobile-Applications-for-Android/tree/master/10.%20Device-APIs">Device APIs</a><br/>- Camera<br/>- PhoneBook<br/>- GeoLocation</td><td>13:00 - 15:30</td><td>Evlogi</td></tr>
-        <tr><td>11</td><td><a href="https://github.com/TelerikAcademy/Mobile-Applications-for-Android/tree/master/11.%20Working-with-data">Working with data</a><br/>- SQLite<br/>- Local file system<br/>- Remote data</td><td>15:30 - 18:00</td><td>Evlogi</td></tr>
-        <tr><td>12</td><td><a href="https://github.com/TelerikAcademy/Mobile-Applications-for-Android/tree/master/12.%20Using-notifications">Using Notifications</a></td><td>18:00 - 20:00</td><td>Plamen</td></tr>
-        <tr><th colspan="4">11 (Mon) January 2016</th></tr>
-        <tr><td></td><td>Free time for coding</td><td>10:00 - 16:00</td><td></td></tr>
-        <tr><td>13</td><td><a href="https://github.com/TelerikAcademy/Mobile-Applications-for-Android/tree/master/13.%20Touch">Touch</a></td><td>16:00 - 17:00</td><td>Evlogi</td></tr>
-        <tr><td>14</td><td><a href="https://github.com/TelerikAcademy/Mobile-Applications-for-Android/tree/master/14.%20Gestures">Gestures</a></td><td>17:00 - 18:00</td><td>Evlogi</td></tr>
-        <tr><td>15</td><td><a href="https://github.com/TelerikAcademy/Mobile-Applications-for-Android/tree/master/15.%20Animations">Animations</a></td><td>18:00 - 21:00</td><td>Plamen</td></tr>
+        <tr><td>10</td><td><a href="https://github.com/TelerikAcademy/Mobile-Applications-for-Android/tree/master/10.%20Device-APIs">Device APIs</a><br/>- Camera<br/>- PhoneBook<br/>- GeoLocation</td><td>10:00 - 12:30</td><td>Evlogi</td></tr>
+        <tr><td>11</td><td><a href="https://github.com/TelerikAcademy/Mobile-Applications-for-Android/tree/master/11.%20Working-with-data">Working with data</a><br/>- SQLite<br/>- Local file system<br/>- Remote data</td><td>13:30 - 16:00</td><td>Evlogi</td></tr>
+        <tr><td>12</td><td><a href="https://github.com/TelerikAcademy/Mobile-Applications-for-Android/tree/master/12.%20Using-notifications">Using Notifications</a></td><td>16:00 - 18:00</td><td>Plamen</td></tr>
+        <tr><th colspan="4">10 (Sun) January 2016</th></tr>
+        <tr><td>13</td><td><a href="https://github.com/TelerikAcademy/Mobile-Applications-for-Android/tree/master/13.%20Touch">Touch</a></td><td>12:00 - 13:00</td><td>Evlogi</td></tr>
+        <tr><td>14</td><td><a href="https://github.com/TelerikAcademy/Mobile-Applications-for-Android/tree/master/14.%20Gestures">Gestures</a></td><td>13:00 - 14:00</td><td>Evlogi</td></tr>
+        <tr><td>15</td><td><a href="https://github.com/TelerikAcademy/Mobile-Applications-for-Android/tree/master/15.%20Animations">Animations</a></td><td>14:00 - 16:00</td><td>Plamen</td></tr>
         <tr><th colspan="4">12 (Tue) January 2016</th></tr>
         <tr><td></td><td>Free time for coding</td><td>10:00 - 18:00</td><td></td></tr>
         <tr><td>16</td><td><a href="https://github.com/TelerikAcademy/Mobile-Applications-for-Android/tree/master/16.%20Multithreading">Multithreading</a></td><td>18:00 - 20:30</td><td>Plamen</td></tr>
@@ -55,7 +53,7 @@
         <tr><td></td><td>Free day for coding Team projects</td><td></td><td></td></tr>
         <tr><th colspan="4">15 (Fri) January 2016</th></tr>
         <tr><td></td><td>Free time for coding</td><td>10:00 - 18:00</td><td></td></tr>
-        <tr><td>19</td><td><strong><a href="https://github.com/TelerikAcademy/Mobile-Applications-for-Android/tree/master/19.%20Workshop-help-with-Team-Projects">Workshop</a></strong>: Help with Team Projects</td><td>18:00 - 22:00</td><td>Evlogi<br>Plamen</td></tr>
+        <tr><td>19</td><td><strong><a href="https://github.com/TelerikAcademy/Mobile-Applications-for-Android/tree/master/19.%20Workshop-help-with-Team-Projects">Workshop</a></strong>: Help with Team Projects</td><td>18:30 - 22:00</td><td>Evlogi<br>Plamen</td></tr>
         <tr><th colspan="4">18 (Mon) January 2016</th></tr>
         <tr><td></td><td>Project defense</td><td>18:00 - 22:00</td><td>Evlogi<br>Plamen</td></tr>
     </tbody>
