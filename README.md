@@ -25,12 +25,12 @@
         <tr><td colspan="4"><h3><a id="user-content-05-tue-january-2016" class="anchor" href="#05-tue-january-2016" aria-hidden="true"><span class="octicon octicon-link"></span></a>05 (Tue) January 2016</h3></td></tr>
         <tr><td>03</td><td>Android Environment<br>- Emulators<br>- "Hello World" app with Android</td><td>10:00 - 12:00</td><td>Evlogi</td></tr>
         <tr><td>04</td><td>Contexts in Android</td><td>12:00 - 13:00</td><td>Evlogi</td></tr>
-        <tr><td>05</td><td>Layouts</td><td>14:00 - 16:00</td><td>Evlogi</td></tr>
-        <tr><td>06</td><td>Fragments</td><td>16:00 - 18:00</td><td>Evlogi</td></tr>
+        <tr><td>05</td><td>Layouts</td><td>14:00 - 17:00</td><td>Evlogi</td></tr>
+        <tr><td>06</td><td>Fragments</td><td>17:00 - 18:00</td><td>Evlogi</td></tr>
         <tr><td colspan="4"><h3><a id="user-content-06-wed-january-2016" class="anchor" href="#06-wed-january-2016" aria-hidden="true"><span class="octicon octicon-link"></span></a>06 (Wed) January 2016</h3></td></tr>
         <tr><td>07</td><td>Views</td><td>10:00 - 12:00</td><td>Evlogi</td></tr>
-        <tr><td>08</td><td>Services</td><td>12:00 - 14:00</td><td>Evlogi</td></tr>
-        <tr><td></td><td>Free time for coding</td><td>14:00 - 18:00</td><td></td></tr>
+        <tr><td>08</td><td>Services</td><td>12:00 - 13:00</td><td>Evlogi</td></tr>
+        <tr><td></td><td>Free time for coding</td><td>13:00 - 18:00</td><td></td></tr>
         <tr><td colspan="4"><h3><a id="user-content-07-thu-january-2016" class="anchor" href="#07-thu-january-2016" aria-hidden="true"><span class="octicon octicon-link"></span></a>07 (Thu) January 2016</h3></td></tr>
         <tr><td></td><td>Free time for coding</td><td>10:00 - 18:00</td><td></td></tr>
         <tr><td>09</td><td><strong>Workshop</strong>: UI /w Telerik components</td><td>18:00 - 21:00</td><td>Plamen</td></tr>
@@ -40,13 +40,14 @@
         <tr><td>11</td><td>Working with data<br/>- SQLite<br/>- Local file system<br/>- Remote data</td><td>15:30 - 18:00</td><td>Evlogi</td></tr>
         <tr><td>12</td><td>Using Notifications</td><td>18:00 - 20:00</td><td>Plamen</td></tr>
         <tr><td colspan="4"><h3><a id="user-content-11-mon-january-2016" class="anchor" href="#11-mon-january-2016" aria-hidden="true"><span class="octicon octicon-link"></span></a>11 (Mon) January 2016</h3></td></tr>
-        <tr><td>13</td><td>Touch</td><td>14:00 - 16:00</td><td>Evlogi</td></tr>
-        <tr><td>14</td><td>Gestures</td><td>16:00 - 18:00</td><td>Evlogi</td></tr>
-        <tr><td>15</td><td>Animations</td><td>18:00 - 22:00</td><td>Plamen</td></tr>
+        <tr><td></td><td>Free time for coding</td><td>10:00 - 16:00</td><td></td></tr>
+        <tr><td>13</td><td>Touch</td><td>16:00 - 17:00</td><td>Evlogi</td></tr>
+        <tr><td>14</td><td>Gestures</td><td>17:00 - 18:00</td><td>Evlogi</td></tr>
+        <tr><td>15</td><td>Animations</td><td>18:00 - 21:00</td><td>Plamen</td></tr>
         <tr><td colspan="4"><h3><a id="user-content-12-tue-january-2016" class="anchor" href="#12-tue-january-2016" aria-hidden="true"><span class="octicon octicon-link"></span></a>12 (Tue) January 2016</h3></td></tr>
         <tr><td></td><td>Free time for coding</td><td>10:00 - 18:00</td><td></td></tr>
         <tr><td>16</td><td>Multithreading</td><td>18:00 - 20:30</td><td>Plamen</td></tr>
-        <tr><td>17</td><td>Using Telerik backend services</td><td>20:30 - 22:00</td><td>Plamen</td></tr>
+        <tr><td>17</td><td>Using Telerik backend services</td><td>20:30 - 21:30</td><td>Plamen</td></tr>
         <tr><td colspan="4"><h3><a id="user-content-13-wed-january-2016" class="anchor" href="#13-wed-january-2016" aria-hidden="true"><span class="octicon octicon-link"></span></a>13 (Wed) January 2016</h3></td></tr>
         <tr><td></td><td>Free time for coding</td><td>10:00 - 18:00</td><td></td></tr>
         <tr><td>18</td><td><strong>Workshop</strong>: Multithreading &amp; Notifications</td><td>18:00 - 22:00</td><td>Plamen</td></tr>
