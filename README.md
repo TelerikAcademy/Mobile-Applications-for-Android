@@ -36,8 +36,8 @@
         <tr><td>09</td><td><strong>Workshop</strong>: UI /w Telerik components</td><td>18:00 - 21:00</td><td>Plamen</td></tr>
         <tr><td colspan="4"><h3><a id="user-content-08-fri-january-2016" class="anchor" href="#08-fri-january-2016" aria-hidden="true"><span class="octicon octicon-link"></span></a>08 (Fri) January 2016</h3></td></tr>
         <tr><td></td><td>Free time for coding</td><td>10:00 - 16:00</td><td></td></tr>
-        <tr><td>10</td><td>Device APIs<br/>- Camera<br/>- PhoneBook<br/>- GeoLocation</td><td>14:00 - 16:30</td><td>Evlogi</td></tr>
-        <tr><td>11</td><td>Working with data<br/>- SQLite<br/>- Local file system<br/>- Remote data</td><td>16:30 - 18:00</td><td>Evlogi</td></tr>
+        <tr><td>10</td><td>Device APIs<br/>- Camera<br/>- PhoneBook<br/>- GeoLocation</td><td>13:00 - 15:30</td><td>Evlogi</td></tr>
+        <tr><td>11</td><td>Working with data<br/>- SQLite<br/>- Local file system<br/>- Remote data</td><td>15:30 - 18:00</td><td>Evlogi</td></tr>
         <tr><td>12</td><td>Using Notifications</td><td>18:00 - 20:00</td><td>Plamen</td></tr>
         <tr><td colspan="4"><h3><a id="user-content-11-mon-january-2016" class="anchor" href="#11-mon-january-2016" aria-hidden="true"><span class="octicon octicon-link"></span></a>11 (Mon) January 2016</h3></td></tr>
         <tr><td>13</td><td>Touch</td><td>14:00 - 16:00</td><td>Evlogi</td></tr>
