@@ -34,7 +34,7 @@
         <tr><td></td><td>Free time for coding</td><td>13:00 - 18:00</td><td></td></tr>
         <tr><th colspan="4">07 (Thu) January 2016</th></tr>
         <tr><td></td><td>Free time for coding</td><td>10:00 - 14:00</td><td></td></tr>
-        <tr><td>10</td><td><strong>Workshop: </strong><a href="https://github.com/TelerikAcademy/Mobile-Applications-for-Android/tree/master/10.%20Workshop-UI-with-Telerik-components">UI /w Telerik components</a></td><td>14:00 - 18:00</td><td>Evlogi</td></tr>
+        <tr><td>10</td><td><strong>Workshop: </strong><a href="https://github.com/TelerikAcademy/Mobile-Applications-for-Android/tree/master/10.%20Workshop-UI-with-Telerik-components">UI /w Telerik components</a></td><td>14:00 - 18:00</td><td>Evlogi<br/>Georgi</td></tr>
         <tr><th colspan="4">08 (Fri) January 2016</th></tr>
         <tr><td>11</td><td><a href="https://github.com/TelerikAcademy/Mobile-Applications-for-Android/tree/master/11.%20Device-APIs">Device APIs</a><br/>- Camera<br/>- PhoneBook<br/>- GeoLocation</td><td>10:00 - 12:30</td><td>Evlogi</td></tr>
         <tr><td>12</td><td><a href="https://github.com/TelerikAcademy/Mobile-Applications-for-Android/tree/master/12.%20Working-with-data">Working with data</a><br/>- SQLite<br/>- Local file system<br/>- Remote data</td><td>13:30 - 16:00</td><td>Evlogi</td></tr>
@@ -56,7 +56,7 @@
         <tr><td></td><td>Free time for coding</td><td>10:00 - 18:00</td><td></td></tr>
         <tr><td>20</td><td><strong>Workshop: </strong><a href="https://github.com/TelerikAcademy/Mobile-Applications-for-Android/tree/master/20.%20Workshop-help-with-Team-Projects">Help with Team Projects</a></td><td>18:30 - 22:00</td><td>Evlogi<br>Plamen</td></tr>
         <tr><th colspan="4">18 (Mon) January 2016</th></tr>
-        <tr><td></td><td>Project defense</td><td>18:00 - 22:00</td><td>Evlogi<br>Plamen</td></tr>
+        <tr><td></td><td>Project defense</td><td>12:00 - 18:00</td><td>Evlogi<br/>Georgi<br/>Plamen</td></tr>
     </tbody>
 </table>
 
