@@ -26,7 +26,7 @@
         <tr><td>03</td><td><a href="https://github.com/TelerikAcademy/Mobile-Applications-for-Android/tree/master/03.%20Setup-Android-Environment">Android Environment</a><br>- Emulators<br>- "Hello World" app with Android</td><td>10:00 - 12:00</td><td>Evlogi</td></tr>
         <tr><td>04</td><td><a href="https://github.com/TelerikAcademy/Mobile-Applications-for-Android/tree/master/04.%20Contexts-in-Android">Contexts in Android</a></td><td>12:00 - 13:00</td><td>Evlogi</td></tr>
         <tr><td>05</td><td><a href="https://github.com/TelerikAcademy/Mobile-Applications-for-Android/tree/master/05.%20Layouts">Layouts</a></td><td>14:00 - 17:00</td><td>Evlogi</td></tr>
-        <tr><td>06</td><td><a href="https://github.com/TelerikAcademy/Mobile-Applications-for-Android/tree/master/06.%20Fragments">Fragments</a></td><td>17:00 - 18:00</td><td>Evlogi</td></tr>
+        <tr><td>06</td><td><a href="https://github.com/TelerikAcademy/Mobile-Applications-for-Android/tree/master/06.%20Fragments">Navigation</a><br/>- Fragments<br/>- Activities</td><td>17:00 - 18:00</td><td>Evlogi</td></tr>
         <tr><th colspan="4">06 (Wed) January 2016</th></tr>
         <tr><td>07</td><td><a href="https://github.com/TelerikAcademy/Mobile-Applications-for-Android/tree/master/07.%20Views">Views</a></td><td>10:00 - 12:00</td><td>Evlogi</td></tr>
         <tr><td>08</td><td><a href="https://github.com/TelerikAcademy/Mobile-Applications-for-Android/tree/master/08.%20Services">Services</a></td><td>12:00 - 13:00</td><td>Evlogi</td></tr>
