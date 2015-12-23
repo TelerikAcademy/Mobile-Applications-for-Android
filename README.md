@@ -23,12 +23,12 @@
         <tr><td>01</td><td><a href="https://github.com/TelerikAcademy/Mobile-Applications-for-Android/tree/master/01.%20Setup-Java-Environment">Setup Java Environment</a></td><td>11:00 - 12:00</td><td>Evlogi</td></tr>
         <tr><td>02</td><td><a href="https://github.com/TelerikAcademy/Mobile-Applications-for-Android/tree/master/02.%20Introduction-to-Java">Introduction to Java</a><br>- Java Basics<br>- OOP with Java</td><td>14:00 - 18:00</td><td>Evlogi</td></tr>
         <tr><th colspan="4">05 (Tue) January 2016</th></tr>
-        <tr><td>03</td><td><a href="https://github.com/TelerikAcademy/Mobile-Applications-for-Android/tree/master/03.%20Setup-Android-Environment">Android Environment</a><br>- Emulators<br>- "Hello World" app with Android</td><td>10:00 - 12:00</td><td>Evlogi</td></tr>
+        <tr><td>03</td><td><a href="https://github.com/TelerikAcademy/Mobile-Applications-for-Android/tree/master/03.%20Setup-Android-Environment">Android Environment</a><br/>- Android History<br/>- Devices<br/>- Emulators<br>- "Hello World" app with Android<br/>- Application Life-cycle</td><td>10:00 - 12:00</td><td>Evlogi</td></tr>
         <tr><td>04</td><td><a href="https://github.com/TelerikAcademy/Mobile-Applications-for-Android/tree/master/04.%20Contexts-in-Android">Contexts in Android</a></td><td>12:00 - 13:00</td><td>Evlogi</td></tr>
         <tr><td>05</td><td><a href="https://github.com/TelerikAcademy/Mobile-Applications-for-Android/tree/master/05.%20Layouts">Layouts</a></td><td>14:00 - 17:00</td><td>Evlogi</td></tr>
         <tr><td>06</td><td><a href="https://github.com/TelerikAcademy/Mobile-Applications-for-Android/tree/master/06.%20Navigation">Navigation</a><br/>- Fragments<br/>- Activities</td><td>17:00 - 18:00</td><td>Evlogi</td></tr>
         <tr><th colspan="4">06 (Wed) January 2016</th></tr>
-        <tr><td>07</td><td><a href="https://github.com/TelerikAcademy/Mobile-Applications-for-Android/tree/master/07.%20Views">Views</a></td><td>10:00 - 12:00</td><td>Evlogi</td></tr>
+        <tr><td>07</td><td><a href="https://github.com/TelerikAcademy/Mobile-Applications-for-Android/tree/master/07.%20Views">Views</a><br/>- Attaching Events</td><td>10:00 - 12:00</td><td>Evlogi</td></tr>
         <tr><td>08</td><td><a href="https://github.com/TelerikAcademy/Mobile-Applications-for-Android/tree/master/08.%20Services">Services</a></td><td>12:00 - 13:00</td><td>Evlogi</td></tr>
         <tr><td>09</td><td><a href="https://github.com/TelerikAcademy/Mobile-Applications-for-Android/tree/master/09.%20Material-design">Material design</a></td><td>14:00 - 16:00</td><td>Evlogi</td></tr>
         <tr><td></td><td>Free time for coding</td><td>13:00 - 18:00</td><td></td></tr>
