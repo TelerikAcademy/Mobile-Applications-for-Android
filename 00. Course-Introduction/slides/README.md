@@ -107,7 +107,7 @@
 ## Additional to this Course Content
 
 # Course Web Site & Forums
--	Register for the [Telerik Academy Forums](http://http://telerikacademy.com/Forum/Category/64/windows-mobile-apps)
+-	Register for the [Telerik Academy Forums](https://telerikacademy.com/Forum/Category/63/android-mobile-apps)
 	-	Discuss the course exercises with your colleagues
 	-	Find solutions for the exercises
 	-	Share source code / discuss ideas
@@ -137,4 +137,4 @@
 <!-- attr: { id:'questions', class:'slide-section', showInPresentation:true } -->
 # Questions
 <!-- ## Android Applications -->
-[link to TelerikAcademy Forum]()
+[link to TelerikAcademy Forum](https://telerikacademy.com/Forum/Category/63/android-mobile-apps)
