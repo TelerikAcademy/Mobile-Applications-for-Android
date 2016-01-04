@@ -11,7 +11,7 @@
 
 
 <!-- section start -->
-<!-- attr: { id:'table-of-contents', class:'table-of-contents slide-section' } -->
+<!-- attr: { id:'table-of-contents', class:'table-of-contents' } -->
 # Table of Contents
 - What's Next in the Academy?
 - The **Mobile Applications for Android** Program
