@@ -13,7 +13,7 @@
 <!-- section start -->
 <!-- attr: { id:'table-of-contents', class:'table-of-contents' } -->
 # Table of Contents
-- What's Next in the Academy?
+- What's Next in the Academy?s
 - The **Mobile Applications for Android** Program
 - The **Trainers** Team
 - Course **Evaluations**
