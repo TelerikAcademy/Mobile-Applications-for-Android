@@ -21,7 +21,7 @@
 
 <!-- section start -->
 <!-- attr: { class:'slide-section', id:'coming-next', showInPresentation: true } -->
-<!-- # Mobile Applications for Windows
+<!-- # Mobile Applications for Android
 ## The Next Module in the Software Academy -->
 
 <!-- attr: { hasScriptWrapper:true, style:'font-size:0.9em' } -->
