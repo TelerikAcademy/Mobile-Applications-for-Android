@@ -318,6 +318,55 @@ public void onCheckboxClicked(View view) {
 
 <!-- section start -->
 <!-- attr: { id:'', class:'slide-section', showInPresentation:true } -->
+<!-- # Radio Buttons -->
+
+<!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'font-size:0.9em' } -->
+# Radio Buttons
+- Allow the user to select one option from a set
+  - group them together inside a `RadioGroup`
+
+```xml
+<RadioGroup ...
+    android:orientation="vertical">
+    <RadioButton ...
+        android:text="@string/pirates"
+        android:onClick="onRadioButtonClicked"/>
+    <RadioButton ...
+        android:text="@string/ninjas"
+        android:onClick="onRadioButtonClicked"/>
+</RadioGroup>
+```
+- If it's not necessary to show all options side-by-side, use a spinner instead
+
+<img class="slide-image" src="imgs/radiobuttons.png" style="height:15%; left:50%; top:80%" />
+
+<!-- attr: { showInPresentation:true, hasScriptWrapper:true, style:'font-size:0.9em' } -->
+# Responding to Click Events
+- Within the `Activity` that hosts this layout
+
+```java
+public void onRadioButtonClicked(View view) {
+    boolean checked = ((RadioButton) view).isChecked();
+    
+    switch(view.getId()) {
+        case R.id.radio_pirates: if (checked) ... break;
+        case R.id.radio_ninjas: if (checked) ... break;
+    }
+}
+```
+
+- The method must:
+  - Be public
+  - Return void
+  - Define a `View` as its only parameter
+
+
+<!-- attr: { id:'', class:'slide-section demo', showInPresentation:true } -->
+<!-- # Radio Buttons -->
+[Demo]()
+
+<!-- section start -->
+<!-- attr: { id:'', class:'slide-section', showInPresentation:true } -->
 <!-- # Toggle Buttons -->
 
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
