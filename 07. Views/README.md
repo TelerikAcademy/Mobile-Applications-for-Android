@@ -1,4 +1,10 @@
-## Android
-### [View Presentation online](http://rawgit.com/TelerikAcademy/Mobile-Applications-for-Android/master/00.%20/slides/index.html)
+## Views
+### [View Presentation online](http://rawgit.com/TelerikAcademy/Mobile-Applications-for-Android/master/07.%20Views/slides/index.html)
 ### Table of Contents
-*    - [go to slide]()
+- Input Controls
+  - Buttons
+  - Text Fields
+  - Check boxes
+  - Toggle Buttons
+  - Spinners
+  - Pickers
