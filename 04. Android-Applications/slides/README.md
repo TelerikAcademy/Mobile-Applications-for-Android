@@ -97,8 +97,9 @@
     - verbose, debug, info, warn, error, assert
 - Breakpoints
 
+<!-- attr { hasScriptWrapper:true } -->
 # Use the System Log
-- To write log messages in your code, use the `Log` class
+- Write log messages in your code using `Log` class
 
 ```java
 @Override
@@ -112,7 +113,8 @@ public void onCreate(Bundle savedInstanceState) {
     }
 }
 ```
-- `Log.wtf()` - What a Terrible Failure
+- **Assert** - an exception that should never happen
+  - `Log.wtf()` - What a Terrible Failure
 
 <!-- attr: { id:'', class:'slide-section demo', showInPresentation:true } -->
 # Debugging

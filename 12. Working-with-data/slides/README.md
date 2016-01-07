@@ -20,6 +20,9 @@
 #
 ##
 
+# Remote data
+[Connecting to the Network](http://developer.android.com/training/basics/network-ops/connecting.html#connection)
+
 
 <!-- section start -->
 <!-- attr: { id:'questions', class:'slide-section', showInPresentation:true } -->

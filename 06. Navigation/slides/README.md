@@ -1,8 +1,7 @@
 <!-- section start -->
 
 <!-- attr: {id: 'title', class: 'slide-title', hasScriptWrapper: true} -->
-# Android
-##  Applications
+# Navigation
 <div class="signature">
     <p class="signature-course">Android Applications</p>
     <p class="signature-initiative">Telerik Software Academy</p>
@@ -13,12 +12,11 @@
 <!-- section start -->
 <!-- attr: { id:'table-of-contents', class:'table-of-contents slide-section' } -->
 # Table of Contents
-
-
-<!-- section start -->
-<!-- attr: { id:'', class:'slide-section', showInPresentation:true } -->
-#
-##
+- Navigation in Android - [link](http://developer.android.com/design/patterns/navigation.html)
+- Swipe Views - [link](http://developer.android.com/training/implementing-navigation/lateral.html)
+  - with and without Tabs
+- Navigation Drawer - [link](http://developer.android.com/training/implementing-navigation/nav-drawer.html)
+- Up Navigation - [link](http://developer.android.com/training/implementing-navigation/ancestral.html)
 
 
 <!-- section start -->
