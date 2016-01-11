@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">LiveNavDemo</string>
+    <string name="take_photo_btn">Take Phote</string>
+    <string name="go_to_second_activity">Go to Second Activity</string>
+    <array name="planets">
+        <item>Mercury</item>
+        <item>Venus</item>
+        <item>Earth</item>
+        <item>Mars</item>
+    </array>
+</resources>
