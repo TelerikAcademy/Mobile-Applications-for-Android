@@ -5,7 +5,7 @@
 
 <div class="signature">
     <p class="signature-course">Android Applications</p>
-    <p class="signature-initiative">Telerik Software Academy</p>
+    <p class="signature-initiative">Telerik School Academy</p>
     <a href="http://academy.telerik.com" class="signature-link">http://academy.telerik.com</a>
 </div>
 
@@ -37,7 +37,7 @@
 <!-- # Input Controls -->
 ```java
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout 
+<LinearLayout
   xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
@@ -69,7 +69,7 @@
 <!-- # Common Controls -->
 - `ToggleButton`
   - An on/off button with a light indicator
-  - Classs 
+  - Classs
 - `Spinner`
   - drop-down list that allows users to select one value from a set
 - `DatePicker`, `TimePicker`
@@ -251,13 +251,13 @@ editText.setOnEditorActionListener(new OnEditorActionListener() {
 - You must specify an Adapter
 
 ```java
-AutoCompleteTextView textView = 
+AutoCompleteTextView textView =
     (AutoCompleteTextView) findViewById(R.id.autocomplete_country);
 
 String[] countries = getResources()
     .getStringArray(R.array.countries_array);
 
-ArrayAdapter<String> adapter = 
+ArrayAdapter<String> adapter =
     new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, countries);
 textView.setAdapter(adapter);
 ```
@@ -301,7 +301,7 @@ textView.setAdapter(adapter);
 ```java
 public void onCheckboxClicked(View view) {
     boolean checked = ((CheckBox) view).isChecked();
-    
+
     switch(view.getId()) {
         case R.id.checkbox_meat:
             if (checked) ... else ... break;
@@ -347,7 +347,7 @@ public void onCheckboxClicked(View view) {
 ```java
 public void onRadioButtonClicked(View view) {
     boolean checked = ((RadioButton) view).isChecked();
-    
+
     switch(view.getId()) {
         case R.id.radio_pirates: if (checked) ... break;
         case R.id.radio_ninjas: if (checked) ... break;
@@ -381,7 +381,7 @@ public void onRadioButtonClicked(View view) {
 <!-- attr: { showInPresentation:true, hasScriptWrapper:true } -->
 # Responding to Button Presses
 ```java
-ToggleButton toggle = 
+ToggleButton toggle =
     (ToggleButton) findViewById(R.id.togglebutton);
 toggle.setOnCheckedChangeListener(
     new CompoundButton.OnCheckedChangeListener() {
@@ -436,7 +436,7 @@ public class SpinnerActivity extends Activity
     public void onNothingSelected(...) { ... }
 }
 ```
-  - Then 
+  - Then
 
 ```java
 Spinner spinner = (Spinner) findViewById(R.id.spinner);

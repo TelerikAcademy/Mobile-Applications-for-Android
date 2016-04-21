@@ -1,5 +1,5 @@
 ## Android -Application
-### [View Presentation online](http://rawgit.com/TelerikAcademy/Mobile-Applications-for-Android/master/04.%20Android-Application/slides/index.html)
+### [View Presentation online](http://rawgit.com/TelerikAcademy/Mobile-Applications-for-Android/master/02. Android-Applications/slides/index.html)
 
 ### Table of Contents
 - New Android Project
