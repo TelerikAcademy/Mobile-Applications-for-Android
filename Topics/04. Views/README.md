@@ -1,5 +1,5 @@
 ## Views
-### [View Presentation online](http://rawgit.com/TelerikAcademy/Mobile-Applications-for-Android/master/04.%20Views/slides/index.html)
+### [View Presentation online](http://rawgit.com/TelerikAcademy/Mobile-Applications-for-Android/master/Topics/04.%20Views/slides/index.html)
 ### Table of Contents
 - Input Controls
   - Buttons
