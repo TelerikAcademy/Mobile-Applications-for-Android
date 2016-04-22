@@ -1,10 +1,10 @@
 <!-- section start -->
 
 <!-- attr: {id: 'title', class: 'slide-title', hasScriptWrapper: true} -->
-# Android Application
+# Android Applications Overview
 <div class="signature">
     <p class="signature-course">Android Applications</p>
-    <p class="signature-initiative">Telerik Software Academy</p>
+    <p class="signature-initiative">Telerik School Academy</p>
     <a href="http://academy.telerik.com" class="signature-link">http://academy.telerik.com</a>
 </div>
 
@@ -17,9 +17,6 @@
   - Running it on Emulators and devices
   - Debugging
 - App Manifest
-- Application
-  - Life-cycle
-  - Context
 
 <!-- attr: { showInPresentation:true } -->
 <!-- # Table of Contents -->
@@ -38,11 +35,10 @@
 
 # New Android Project
 - [Directory Structure](https://developer.android.com/tools/projects/index.html)
-- [Udacity course](https://www.udacity.com/course/progress#!/c-ud853)
 
-- Minimum API - for Jan 2016
-  - API 15: Android 4.0.3 (IceCreamSandwich) 
-    - Currently can run on **96.2%** of devices
+- Minimum API - for Apr 2016
+  - API 15: Android 4.0.3 (IceCreamSandwich)
+    - Currently can run on **97.3%** of devices
   - Create a new Blank Activity with Fragment
   - Wait for Gradle build to finish
 
@@ -52,11 +48,7 @@
   - Right-click on 'app'
   - New > Image asset
 2. Run Emulator
-  - Install HAXM (Hardware Accelerated Execution Manager) if needed
-    - From SDK Manager
-  - Go to `C:\Users\[your user name]\AppData\ Local\Android\sdk\extras\intel\ Hardware_Accelerated_Execution_Manager\`
-  - Run `intelhaxm-android.exe`
-    - May need to turn off Hyper-V from Windows Features
+  - AVD or Genymotion
 
 <!-- attr: { style:'font-size:0.9em' } -->
 # Gradle
@@ -119,7 +111,7 @@ public void onCreate(Bundle savedInstanceState) {
 <!-- attr: { id:'', class:'slide-section demo', showInPresentation:true } -->
 # Debugging
 [Demo]()
- 
+
 <!-- section start -->
 <!-- attr: { id:'', class:'slide-section', showInPresentation:true } -->
 <!-- # Android Application
@@ -133,19 +125,6 @@ public void onCreate(Bundle savedInstanceState) {
   - Receivers
     - You need to register every one in the App Manifest
 
-<!-- attr: { hasScriptWrapper:true } -->
-# The Application Life-cycle
-<img class="slide-image" src="imgs/app-life-cycle.png" style="height:80%; left:30%" />
-
-# Context
-- Interface to global information about an application environment
-- An abstract class whose implementation is provided by the Android system
-- It allows access to
-  - Application-specific resources and classes
-  - Up-calls for application-level operations
-    - Launching activities
-    - Broadcasting
-    - Receiving intents, etc.
 
 <!-- attr: { style:'font-size:0.9em' } -->
 # Activity
@@ -221,6 +200,5 @@ public void onCreate(Bundle savedInstanceState) {
 
 <!-- section start -->
 <!-- attr: { id:'questions', class:'slide-section', showInPresentation:true } -->
-# Questions
-<!-- ## Android Applications -->
-[link to TelerikAcademy Forum]()
+# Android Applications
+## Questions?

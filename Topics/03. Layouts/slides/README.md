@@ -4,7 +4,7 @@
 # Android Layouts
 <div class="signature">
     <p class="signature-course">Android Applications</p>
-    <p class="signature-initiative">Telerik Software Academy</p>
+    <p class="signature-initiative">Telerik School Academy</p>
     <a href="http://academy.telerik.com" class="signature-link">http://academy.telerik.com</a>
 </div>
 
@@ -35,7 +35,7 @@
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout 
+<LinearLayout
   xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
