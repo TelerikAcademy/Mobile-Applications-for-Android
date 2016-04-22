@@ -1,9 +1,9 @@
 # School Academy - Mobile Applications for Android
-## 22-24 April 2016
+## 21-23 April 2016
 
 ## Course Program
 
-### Day 1 - 22 (Fri) Apr 2016
+### Day 1 - 21 (Thu) Apr 2016
 
 | #    | Topic                         | Description                                                                     |Time   | Duration |
 | ---- | :---------------------------- | ------------------------------------------------------------------------------- | :---- |:---------|
@@ -13,7 +13,7 @@
 | 4    | Layouts                         | Relative, Linear, Grid                                                        | 15:30 | 0.5h     |
 | 5    | Views                         | Buttons, EditText, ListViews (Adapters)                                         | 16:15 | 2h       |
 
-### Day 2 - 23 (Sat) Apr 2016
+### Day 2 - 23 (Fri) Apr 2016
 
 | #    | Topic                    | Time  | Duration |
 | ---- | :------------------------|:------|:---------|
@@ -22,7 +22,7 @@
 |      | Navigation and Indents   |
 |      | Gestures                 |
 
-### Day 3 - 24 (Sun) Apr 2016
+### Day 3 - 24 (Sat) Apr 2016
 
 | #    | Topic                                               | Time  | Duration |
 | :--- |:--------------------------------------------------- |:------|:---------|
