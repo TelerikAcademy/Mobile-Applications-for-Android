@@ -1,5 +1,5 @@
 # Mobile Applications for Android
-##  Creating Game Application
+##  Creating Game Application (WiP)
 
 Design and implement a native mobile game for **Android**. The application should be **touch-friendly** and dynamic.
 
@@ -7,20 +7,20 @@ Design and implement a native mobile game for **Android**. The application shoul
 
 ### Creativity
 
-- You game should not be regular 2048 or Bulls and Cows
+- You game should not be yet another 2048 or Bulls and Cows
 - **Up to XX points**
 
 ### Dynamics
 
 - You game should  be dynamic and not turn based
   - Turn-based games fit more in the LoB application requirements
-- **Up to XX points**
+- **Up to 15 points**
 
 ### Value to the end user
 
 - The game must be interesting
   - Develop something you will play
-- **Up to XX points**
+- **Up to 15 points**
 
 ### Use custom Views
 
