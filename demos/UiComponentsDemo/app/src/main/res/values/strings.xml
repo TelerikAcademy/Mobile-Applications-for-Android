@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">UiComponentsDemo</string>
+    <string name="superhero_id_key">superhero_id</string>
+</resources>
