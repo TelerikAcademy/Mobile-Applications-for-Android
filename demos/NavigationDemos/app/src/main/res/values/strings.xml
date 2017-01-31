@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">NavigationDemos</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="drawer_item_home">Books</string>
+    <string name="drawer_item_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
