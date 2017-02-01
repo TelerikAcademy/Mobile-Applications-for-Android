@@ -12,7 +12,7 @@ import com.minkov.navigationdemos.models.Book;
 
 import java.io.Serializable;
 
-public class BookDetailsActivity extends AppCompatActivity {
+public class BookDetailsActivity extends DrawerNavigationActivityBase {
     public static final String BOOK_KEY = "book";
 
     @Override
