@@ -21,9 +21,8 @@ public class BaseDrawerActivity extends AppCompatActivity {
     }
 
     protected void setupDrawer() {
-
-        View view = this.findViewById(R.id.container_drawer);
-        if (view == null) {
+        View drawerContainer = this.findViewById(R.id.container_drawer);
+        if (drawerContainer == null) {
             throw new UnsupportedOperationException("The activity must have an element with id \"container_drawer\"");
         }
 
