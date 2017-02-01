@@ -1,21 +1,15 @@
 package com.minkov.navigationdemos.activities;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
+import android.support.v7.app.AppCompatActivity;
 
-import com.mikepenz.materialdrawer.Drawer;
-import com.mikepenz.materialdrawer.DrawerBuilder;
-import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
-import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
 import com.minkov.navigationdemos.ICanNavigateActivity;
 import com.minkov.navigationdemos.R;
 import com.minkov.navigationdemos.fragments.BookDetailsFragment;
-import com.minkov.navigationdemos.fragments.DrawerFragment;
 import com.minkov.navigationdemos.models.Book;
 
-public class BooksListActivity extends AppCompatActivity
+public class BooksListActivity extends BaseDrawerActivity
         implements ICanNavigateActivity<Book> {
 
     boolean isPhoneView;
@@ -30,13 +24,6 @@ public class BooksListActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_books_list);
 
-        DrawerFragment drawerFragment = new DrawerFragment();
-
-        this.getSupportFragmentManager()
-                .beginTransaction()
-                .replace(R.id.container_drawer, drawerFragment)
-                .commit();
-
         this.bookDetailsFragment =
                 (BookDetailsFragment) this.getSupportFragmentManager()
                         .findFragmentById(R.id.fragment_book_details);
@@ -44,7 +31,6 @@ public class BooksListActivity extends AppCompatActivity
             this.isPhoneView = false;
         }
     }
-
 
     @Override
     public void navigate(Book book) {

@@ -12,13 +12,18 @@ import com.mikepenz.materialdrawer.Drawer;
 import com.mikepenz.materialdrawer.DrawerBuilder;
 import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
 import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
+import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 import com.minkov.navigationdemos.R;
+import com.minkov.navigationdemos.utis.DrawerItemInfo;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class DrawerFragment extends Fragment {
-    private Drawer.OnDrawerItemClickListener onDrawerItemClickListener;
 
+    private static final String ARG_DRAWER_ITEMS_KEY = "item-key";
+    private Drawer.OnDrawerItemClickListener onDrawerItemClickListener;
 
     public DrawerFragment() {
         // Required empty public constructor
@@ -30,7 +35,7 @@ public class DrawerFragment extends Fragment {
         Bundle args = new Bundle();
         drawerFragment.setOnDrawerItemClickListener(onDrawerItemClickListener);
 
-        args.putSerializable("drawerItems", drawerItems);
+        args.putSerializable(ARG_DRAWER_ITEMS_KEY, drawerItems);
         drawerFragment.setArguments(args);
 
         return drawerFragment;
@@ -53,21 +58,20 @@ public class DrawerFragment extends Fragment {
         View root = this.getView();
         Toolbar toolbar = (Toolbar) (root.findViewById(R.id.drawer_toolbar));
 
-        PrimaryDrawerItem item1 = new PrimaryDrawerItem()
-                .withIdentifier(1)
-                .withName(R.string.drawer_item_home);
-
-        SecondaryDrawerItem item2 = new SecondaryDrawerItem()
-                .withIdentifier(2)
-                .withName(R.string.drawer_item_tabs);
+        List<PrimaryDrawerItem> items =
+                ((ArrayList<DrawerItemInfo>) this.getArguments().getSerializable(ARG_DRAWER_ITEMS_KEY))
+                        .stream()
+                        .map(drawerItemInfo ->
+                                new PrimaryDrawerItem()
+                                        .withIdentifier(drawerItemInfo.getId())
+                                        .withName(drawerItemInfo.getTitle())
+                        )
+                        .collect(Collectors.toList());
 
         Drawer result = new DrawerBuilder()
                 .withActivity(this.getActivity())
                 .withToolbar(toolbar)
-                .addDrawerItems(
-                        item1,
-                        item2
-                )
+                .withDrawerItems(new ArrayList<>(items))
                 .withOnDrawerItemClickListener(this.onDrawerItemClickListener)
                 .build();
 
@@ -84,11 +88,4 @@ public class DrawerFragment extends Fragment {
     public void setOnDrawerItemClickListener(Drawer.OnDrawerItemClickListener onDrawerItemClickListener) {
         this.onDrawerItemClickListener = onDrawerItemClickListener;
     }
-
-
-    public class DrawerItemInfo {
-        public String title;
-        public int id;
-    }
-
 }

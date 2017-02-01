@@ -8,11 +8,14 @@ import android.widget.Toast;
 
 import com.minkov.navigationdemos.R;
 import com.minkov.navigationdemos.fragments.BookDetailsFragment;
+import com.minkov.navigationdemos.fragments.DrawerFragment;
 import com.minkov.navigationdemos.models.Book;
+import com.minkov.navigationdemos.utis.DrawerItemInfo;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
-public class BookDetailsActivity extends DrawerNavigationActivityBase {
+public class BookDetailsActivity extends BaseDrawerActivity {
     public static final String BOOK_KEY = "book";
 
     @Override
