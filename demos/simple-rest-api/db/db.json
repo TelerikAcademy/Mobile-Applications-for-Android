@@ -1,0 +1,24 @@
+{
+  "books": [
+    {
+      "title": "The Fellowship of the Ring",
+      "description": "Frodo Baggins knew the Ringwraiths were searching for him—and the Ring of Power he bore that would enable Sauron to destroy all that was good in Middle-earth. Now it was up to Frodo and his faithful servant Sam to carry the Ring to where it could be destroyed—in the very center of Saurons dark kingdom.",
+      "id": "848590bf-fb9f-4027-a2d9-99c7eab81a2e"
+    },
+    {
+      "title": "The Two Towers",
+      "description": "The Fellowship was scattered. Some were bracing hopelessly for war against the ancient evil of Sauron. Some were contending with the treachery of the wizard Saruman. Only Frodo and Sam were left to take the accursed Ring of Power to be destroyed in Mordor–the dark Kingdom where Sauron was supreme. Their guide was Gollum, deceitful and lust-filled, slave to the corruption of the Ring. Thus continues the magnificent, bestselling tale of adventure begun in The Fellowship of the Ring, which reaches its soul-stirring climax in The Return of the King.",
+      "id": "bc6ee1e9-773b-43d1-9a05-0c7ed0f904d5"
+    },
+    {
+      "title": "The Return of the King",
+      "description": "The Companions of the Ring have become involved in separate adventures as the quest continues. Aragorn, revealed as the hidden heir of the ancient Kings of the West, joined with the Riders of Rohan against the forces of Isengard, and took part in the desperate victory of the Hornburg. Merry and Pippin, captured by Orcs, escaped into Fangorn Forest and there encountered the Ents. Gandalf returned, miraculously, and defeated the evil wizard, Saruman. Meanwhile, Sam and Frodo progressed towards Mordor to destroy the Ring, accompanied by SmEagol--Gollum, still obsessed by his precious. After a battle with the giant spider, Shelob, Sam left his master for dead; but Frodo is still alive--in the hands of the Orcs. And all the time the armies of the Dark Lord are massing. J.R.R. Tolkiens great work of imaginative fiction has been labeled both a heroic romance and a classic fantasy fiction. By turns comic and homely, epic and diabolic, the narrative moves through countless changes of scene and character in an imaginary world which is totally convincing in its detail.",
+      "id": "d8cc2c38-663b-45d4-844b-68e702413123"
+    },
+    {
+      "title": "NEW BOOK",
+      "description": "THIS IS A NEW BOOK",
+      "id": "9f52a10b-58a7-49ad-b737-71dee540bb66"
+    }
+  ]
+}

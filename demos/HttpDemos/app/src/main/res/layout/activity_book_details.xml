@@ -9,10 +9,10 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.minkov.httpdemos.BookDetailsActivity">
+    tools:context=".views.books.details.BookDetailsActivity">
 
-    <TextView
-        android:id="@+id/tv_title"
+    <FrameLayout
+        android:id="@+id/container_book_details"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"></FrameLayout>
 </LinearLayout>

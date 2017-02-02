@@ -9,9 +9,10 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:orientation="vertical"
-    tools:context="com.minkov.httpdemos.MainActivity">
-    <ListView
-        android:id="@+id/lv_books"
+    tools:context=".views.books.list.BooksListActivity">
+
+    <FrameLayout
+        android:id="@+id/container_books_list"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"></ListView>
+        android:layout_height="match_parent"></FrameLayout>
 </LinearLayout>
