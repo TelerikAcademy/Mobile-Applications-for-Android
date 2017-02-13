@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">MvpExplore2</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="model_add_title">Add Superhero</string>
+    <string name="agree">Save</string>
+    <string name="disagree">Cancel</string>
+</resources>
