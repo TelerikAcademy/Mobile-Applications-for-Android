@@ -69,7 +69,7 @@ public class BooksListFragment extends Fragment {
 
         loadingFragment.show();
 
-        IDataService<Book> booksData = new HttpDataService<>("http://192.168.153.31:3001/api/books", Book.class, Book[].class);
+        IDataService<Book> booksData = new HttpDataService<>("http://192.168.1.174:3001/api/books", Book.class, Book[].class);
 
         booksData.getAll((ex, books) -> {
             this.getActivity()

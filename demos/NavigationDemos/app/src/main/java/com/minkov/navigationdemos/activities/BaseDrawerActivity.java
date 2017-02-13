@@ -31,6 +31,7 @@ public class BaseDrawerActivity extends AppCompatActivity {
         items.add(new DrawerItemInfo(1, "Books"));
         items.add(new DrawerItemInfo(2, "Tabs"));
         items.add(new DrawerItemInfo(3, "Another"));
+        items.add(new DrawerItemInfo(4, "Another 2"));
 
         Fragment drawerFragment =
                 DrawerFragment.createFragment(items, (view, position, drawerItem) -> {

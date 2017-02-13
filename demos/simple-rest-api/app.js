@@ -14,7 +14,7 @@ let app = express();
 app.use(bodyParser.json());
 
 app.get("/api/books", (req, res) => {
-    waiter.wait(1000)
+    waiter.wait(5000)
         .then(() => data.getAllBooks())
         .then(books => books.map(book => mapper.map(book, "id", "title")))
         .then(books => res.send(books));
