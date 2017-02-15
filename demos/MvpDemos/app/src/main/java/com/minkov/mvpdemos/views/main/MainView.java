@@ -1,5 +1,6 @@
 package com.minkov.mvpdemos.views.main;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -13,6 +14,8 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.minkov.mvpdemos.R;
+import com.minkov.mvpdemos.ui.ModalFactory;
+import com.minkov.mvpdemos.ui.Notifier;
 import com.minkov.mvpdemos.views.details.DetailsActivity;
 
 /**
@@ -23,11 +26,16 @@ public class MainView
         implements
         MainContracts.View,
         AdapterView.OnItemClickListener,
-        View.OnClickListener {
-    MainContracts.Presenter presenter;
+        View.OnClickListener,
+        ModalFactory.ModalFactoryPositiveHandler {
+    private MainContracts.Presenter presenter;
+
     private ListView lvNames;
     private ArrayAdapter<String> adapter;
     private FloatingActionButton btnAdd;
+
+    private ModalFactory modalFactory;
+    private Notifier notifier;
 
     public MainView() {
         // Required empty public constructor
@@ -69,9 +77,10 @@ public class MainView
 
     @Override
     public void showAddView() {
-        //Navigate to another VIEW
-        //or Show modal
-        //or do nothing
+        Dialog addModal =
+                this.modalFactory.
+                        getAddNameModal(this.getContext(), this);
+        addModal.show();
     }
 
     public static MainView create() {
@@ -88,9 +97,8 @@ public class MainView
         this.adapter.addAll(names);
     }
 
-    public void notifyText(String s) {
-        Toast.makeText(this.getContext(), s, Toast.LENGTH_SHORT)
-                .show();
+    public void notifyText(String text) {
+        this.notifier.notifySuccess(this.getContext(), text);
     }
 
     @Override
@@ -101,4 +109,18 @@ public class MainView
                 break;
         }
     }
+
+    public void setModalFactory(ModalFactory modalFactory) {
+        this.modalFactory = modalFactory;
+    }
+
+    public void setNotifier(Notifier notifier) {
+        this.notifier = notifier;
+    }
+
+    @Override
+    public void onPositive() {
+        this.notifier.notifySuccess(this.getContext(), "Agreed!");
+    }
+
 }
