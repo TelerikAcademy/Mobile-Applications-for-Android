@@ -11,6 +11,9 @@ import android.widget.TextView;
 import com.minkov.mvpdagger2UnitTestingdemos.R;
 import com.minkov.mvpdagger2UnitTestingdemos.models.Superhero;
 
+import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.schedulers.Schedulers;
+
 /**
  * A simple {@link Fragment} subclass.
  */
@@ -29,7 +32,9 @@ public class DetailsView extends Fragment implements DetailsContracts.View {
 
         this.tvName = (TextView) root.findViewById(R.id.tvName);
 
-        this.presenter.start();
+        this.presenter.start()
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread());
 
         return root;
     }

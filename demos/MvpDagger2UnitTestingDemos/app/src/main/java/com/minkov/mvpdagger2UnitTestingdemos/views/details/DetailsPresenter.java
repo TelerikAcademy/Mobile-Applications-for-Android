@@ -3,8 +3,10 @@ package com.minkov.mvpdagger2UnitTestingdemos.views.details;
 import com.minkov.mvpdagger2UnitTestingdemos.data.LocalData;
 import com.minkov.mvpdagger2UnitTestingdemos.models.Superhero;
 
+import io.reactivex.Observable;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.functions.Consumer;
+import io.reactivex.functions.Function;
 import io.reactivex.schedulers.Schedulers;
 
 public class DetailsPresenter implements DetailsContracts.Presenter {
@@ -25,15 +27,14 @@ public class DetailsPresenter implements DetailsContracts.Presenter {
     }
 
     @Override
-    public void start() {
-        this.data.getById(this.superheroId)
-                .subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new Consumer<Superhero>() {
+    public Observable<Boolean> start() {
+        return this.data.getById(this.superheroId)
+                .map(new Function<Superhero, Boolean>() {
                     @Override
-                    public void accept(Superhero superhero) throws Exception {
+                    public Boolean apply(Superhero superhero) throws Exception {
                         getView()
                                 .setDetails(superhero);
+                        return true;
                     }
                 });
     }

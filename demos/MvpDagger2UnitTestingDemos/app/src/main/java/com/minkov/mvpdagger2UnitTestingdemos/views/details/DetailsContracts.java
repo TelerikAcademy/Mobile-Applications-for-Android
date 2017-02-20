@@ -2,6 +2,8 @@ package com.minkov.mvpdagger2UnitTestingdemos.views.details;
 
 import com.minkov.mvpdagger2UnitTestingdemos.models.Superhero;
 
+import io.reactivex.Observable;
+
 /**
  * Created by minkov on 2/15/17.
  */
@@ -16,7 +18,7 @@ public class DetailsContracts {
     public interface Presenter {
         DetailsContracts.View getView();
 
-        void start();
+        Observable<Boolean> start();
 
         void setId(String name);
     }

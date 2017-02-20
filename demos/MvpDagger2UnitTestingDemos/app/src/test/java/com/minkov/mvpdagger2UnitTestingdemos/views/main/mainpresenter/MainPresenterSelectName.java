@@ -40,7 +40,6 @@ import static org.mockito.Mockito.when;
 @Config(constants = BuildConfig.class)
 //@Config(sdk = 18, manifest = "app/src/main/AndroidManifest.xml")
 public class MainPresenterSelectName {
-
     List<Superhero> SUPERHEROES;
 
     @Mock
@@ -56,11 +55,9 @@ public class MainPresenterSelectName {
     Notifier notifier;
 
     MainPresenter presenter;
-    private CountDownLatch latch;
 
     @Before
     public void testInit() {
-        latch = new CountDownLatch(1);
         MockitoAnnotations.initMocks(this);
 
         SUPERHEROES = new ArrayList<>();
@@ -87,7 +84,9 @@ public class MainPresenterSelectName {
         presenter.selectName(2);
         verify(view)
                 .notifyText(
-                        String.format(MainPresenter.NOTIFICATION_FORMAT, SUPERHEROES.get(2).getName())
+                        String.format(
+                                MainPresenter.NOTIFICATION_FORMAT,
+                                SUPERHEROES.get(2).getName())
                 );
     }
 
