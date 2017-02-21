@@ -39,20 +39,15 @@ public class MainPresenter
 
     public Observable<Boolean> start() {
         return this.data.getAll()
-                .map(new Function<List<Superhero>, List<String>>() {
+                .map(new Function<List<Superhero>, Boolean>() {
                     @Override
-                    public List<String> apply(List<Superhero> superherosResult) throws Exception {
+                    public Boolean apply(List<Superhero> superherosResult) throws Exception {
                         superheroes = new ArrayList<Superhero>(superherosResult);
                         ArrayList<String> names = new ArrayList<>();
                         for (Superhero sh : superheroes) {
                             names.add(sh.getName());
                         }
-                        return names;
-                    }
-                })
-                .map(new Function<List<String>, Boolean>() {
-                    @Override
-                    public Boolean apply(List<String> names) throws Exception {
+
                         String[] namesArray = new String[names.size()];
                         names.toArray(namesArray);
                         getView().setNames(namesArray);

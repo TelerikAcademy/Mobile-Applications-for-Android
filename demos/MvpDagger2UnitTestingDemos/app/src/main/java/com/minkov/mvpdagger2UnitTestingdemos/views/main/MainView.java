@@ -62,7 +62,8 @@ public class MainView
         //  Start the presenter
         this.presenter.start()
                 .subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread());
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe();
 
         return root;
     }
