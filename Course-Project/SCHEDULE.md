@@ -13,6 +13,8 @@ _March 2017_
 | 17:20 | Unknown device   |
 | 18:00 | Dedsec           |
 
+## Date 2: March 7, 2017
+
 | Time  | Team name             |
 | ----- | --------------------- |
 | 14:00 | Marshmallow           |
