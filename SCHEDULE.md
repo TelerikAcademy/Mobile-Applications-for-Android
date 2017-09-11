@@ -1,32 +1,54 @@
-# School Academy - Mobile Applications for Android
-## 21-23 April 2016
+# Course Program
 
-## Course Program
-
-### Day 1 - 21 (Thu) Apr 2016
-
-| #    | Topic                         | Description                                                                     |Time   | Duration |
-| ---- | :---------------------------- | ------------------------------------------------------------------------------- | :---- |:---------|
-| 1     | Android Overview              | Android, versions, APIs, Devices, vendors                                       | 11:00 | 1h       |
-| 2    | Android SDK                   | Devices, Emulators, IDEs (Android Studio)                                       | 12:15 | 1h       |
-| 3    | Android Applications Overview | Architecture (Resources, Activities, fragments....), "Hello Worlds" Android app | 14:15 | 1h       |
-| 4    | Layouts                         | Relative, Linear, Grid                                                        | 15:30 | 0.5h     |
-| 5    | Views                         | Buttons, EditText, ListViews (Adapters)                                         | 16:15 | 2h       |
-
-### Day 2 - 23 (Fri) Apr 2016
-
-| #    | Topic                    | Time  | Duration |
-| ---- | :------------------------|:------|:---------|
-|      | Contexts in Android      | 11:00 | 1h       |
-|      | Services                 |
-|      | Navigation and Indents   |
-|      | Gestures                 |
-
-### Day 3 - 24 (Sat) Apr 2016
-
-| #    | Topic                                               | Time  | Duration |
-| :--- |:--------------------------------------------------- |:------|:---------|
-|      | Using SQLite                                        |
-|      | Working with SharedPreferences                      |
-|      | Sending and receiving data through HTTP             |
-|      | Device APIs: Camera, Geolocation, etc...            |
+1. Java Intro
+ - Course Introduction
+ - Setup of Java environment
+ - Tools
+ - Java Syntax
+ - Java Classes and interfaces
+ - Enumerations
+ - Anonymous classes
+ - Inheritance & Polymorphism
+ - Generics classes and methods
+ - Data structures
+  - Lists, hash tables, trees, queues, etc...
+2. Android Intro
+ - Setup Android env
+ - Tools
+  - Android Studio
+  - Emulators
+ - Gradle
+ - Android projects
+ - Activities
+ - UI Components
+ - Adapters
+ - Events
+3. UI 
+ - Layout components
+ - Fragments
+ - Touch and Gestures
+ - Navigation and intents
+  - Drawers and tabs
+ - Custom views
+ - Using third-party components
+4. Async & HTTP
+ - Async operations
+ - ReactiveX
+ - Http requests
+ - Parsing JSON
+ - Service layer
+5. Data & others
+ - SQLite and local storage
+ - Notifications
+ - Lifecycle
+ - Services
+ - Animations
+6. Architecture
+ - MVP pattern
+ - Dependency injection with Dagger2
+7. Testing
+ - Unit testing
+ - UI Testing
+8. Device APIs 
+ - Camera
+ - Location
