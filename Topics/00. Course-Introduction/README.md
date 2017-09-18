@@ -24,11 +24,11 @@
 <!-- attr: { hasScriptWrapper:true, style:'font-size:0.9em' } -->
 # Mobile Applications for Android
 - **Mobile Applications for Android**
-  - The first mobile course
+  - The first and last mobile course
 - Lectures 2 times a week
 - The course examination?
-  - Course project for teams of 2
-  - End of February 2017
+  - Individual course project
+  - 12-13 October 2017
 
 <!-- section start -->
 <!-- attr: {class: 'slide-section', id: 'spa-program'} -->
@@ -53,20 +53,7 @@
 <!-- attr: { style:'font-size:0.9em' } -->
 # Course Evaluation
 - Course Evaluation
-  - **Course project** – up to 75%
-  - **Workshops Attendance** - up to 10%
-    - Only for on site participants
-  - **Solved workshop tasks** - up to 10%
-  - **Peer-review of solved workshop tasks** - up to 5%
-
-# Workshops Peer Reviews
-- Everyone will **get feedback** for their workshop solution
-- Everyone will **give feedback** for few random workshop solution
-  - Students submit homework **anonymously**
-  - Please exclude your name from the submissions!
-  - For each workshop solution
-    - Participants **evaluate 3 random homeworks**
-      - Per workshop
+  - **Course project** – up to 100%
 
 <!-- section start -->
 <!-- attr: { id:'resources', class:'slide-section' } -->
@@ -84,7 +71,7 @@
 - The Telerik Integrated Learning System ([TILS](http://www.telerikacademy.com))
   - Important resource for all students
   -  Reports about your results
-- [Course site](http://telerikacademy.com/Courses/Courses/Details/412)
+- [Course site](http://telerikacademy.com/Courses/Courses/Details/445)
 
 
 # Required Software
