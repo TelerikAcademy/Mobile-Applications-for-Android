@@ -6,8 +6,10 @@ package com.minkov.demos.mvp.models;
 
 public class Person {
   private String name;
+  private String id;
 
-  public Person(String name) {
+  public Person(String id, String name) {
+    setId(id);
     setName(name);
   }
 
@@ -17,5 +19,13 @@ public class Person {
 
   public void setName(String name) {
     this.name = name;
+  }
+
+  public String getId() {
+    return id;
+  }
+
+  public void setId(String id) {
+    this.id = id;
   }
 }
