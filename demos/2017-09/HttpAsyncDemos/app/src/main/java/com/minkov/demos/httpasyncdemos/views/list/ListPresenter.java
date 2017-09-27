@@ -30,7 +30,7 @@ public class ListPresenter implements ListContracts.Presenter<ListContracts.View
   @Override
   public void load() {
     mView.showLoading();
-    mHttpRequester.get("http://192.168.43.115:3001/api/people/")
+    mHttpRequester.get("http://192.168.201.77:3001/api/people")
             .observeOn(AndroidSchedulers.mainThread())
             .subscribeOn(Schedulers.newThread())
             .subscribe(new Consumer<String>() {
