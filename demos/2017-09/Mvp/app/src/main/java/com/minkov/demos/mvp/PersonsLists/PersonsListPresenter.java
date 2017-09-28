@@ -1,5 +1,7 @@
 package com.minkov.demos.mvp.PersonsLists;
 
+import android.content.Context;
+
 import com.minkov.demos.mvp.models.Person;
 import com.minkov.demos.mvp.repositories.base.BaseRepository;
 
@@ -16,7 +18,8 @@ public class PersonsListPresenter implements PersonsListContracts.Presenter {
   private PersonsListContracts.View mView;
   private Person[] mPersons;
 
-  public PersonsListPresenter(BaseRepository<Person> data) {
+  public PersonsListPresenter(
+          BaseRepository<Person> data) {
     mData = data;
   }
 
@@ -32,6 +35,11 @@ public class PersonsListPresenter implements PersonsListContracts.Presenter {
               public void accept(Person[] persons) throws Exception {
                 mPersons = persons;
                 mView.setPersons(persons);
+              }
+            }, new Consumer<Throwable>() {
+              @Override
+              public void accept(Throwable throwable) throws Exception {
+                throwable.printStackTrace();
               }
             });
   }

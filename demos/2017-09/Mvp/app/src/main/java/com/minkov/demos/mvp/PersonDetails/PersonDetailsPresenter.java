@@ -28,6 +28,10 @@ public class PersonDetailsPresenter implements PersonDetailsContacts.Presenter {
   @Override
   public void subscribe(PersonDetailsContacts.View view) {
     mView = view;
+    reload();
+  }
+
+  private void reload() {
     mRepository.getById(mPersonId)
             .observeOn(AndroidSchedulers.mainThread())
             .subscribeOn(Schedulers.newThread())
@@ -47,5 +51,6 @@ public class PersonDetailsPresenter implements PersonDetailsContacts.Presenter {
   @Override
   public void setPersonId(String id) {
     mPersonId = id;
+    reload();
   }
 }

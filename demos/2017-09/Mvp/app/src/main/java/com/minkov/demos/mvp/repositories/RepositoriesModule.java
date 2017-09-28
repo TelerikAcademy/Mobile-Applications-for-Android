@@ -1,6 +1,7 @@
 package com.minkov.demos.mvp.repositories;
 
 import com.minkov.demos.mvp.http.HttpRequester;
+import com.minkov.demos.mvp.http.Url;
 import com.minkov.demos.mvp.repositories.base.BaseRepository;
 import com.minkov.demos.mvp.models.Person;
 import com.minkov.demos.mvp.utils.JsonParser;
@@ -19,7 +20,8 @@ import dagger.Provides;
 public class RepositoriesModule {
   @Provides
   BaseRepository<Person> providesData(HttpRequester httpRequester,
-                                      JsonParser<Person> jsonParser) {
-    return new PersonRepository(httpRequester, jsonParser);
+                                      JsonParser<Person> jsonParser,
+                                      Url<Person> url) {
+    return new GenericRepository<>(httpRequester, jsonParser, url);
   }
 }

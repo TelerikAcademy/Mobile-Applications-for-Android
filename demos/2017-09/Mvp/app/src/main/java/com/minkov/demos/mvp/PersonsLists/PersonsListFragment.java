@@ -18,6 +18,7 @@ import android.widget.TextView;
 import com.minkov.demos.mvp.PersonDetails.PersonDetailsActivity;
 import com.minkov.demos.mvp.R;
 import com.minkov.demos.mvp.models.Person;
+import com.minkov.demos.mvp.ui.base.ICanNavigate;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -28,6 +29,7 @@ public class PersonsListFragment extends Fragment  implements PersonsListContrac
   private ListView mListViewPersons;
   private ArrayAdapter<Person> mPersonsAdapter;
   private PersonsListContracts.Presenter mPresenter;
+  private ICanNavigate<Person> mICanNavigate;
 
   public PersonsListFragment() {
   }
@@ -70,13 +72,12 @@ public class PersonsListFragment extends Fragment  implements PersonsListContrac
 
   @Override
   public void showDetailsWith(Person mPerson) {
-    Intent intent = new Intent(getContext(), PersonDetailsActivity.class);
-    intent.putExtra(PersonDetailsActivity.EXTRA_PERSON_KEY, mPerson.getId());
-    getActivity().startActivity(intent);
+    mICanNavigate.navigateWith(mPerson);
   }
 
-  public static PersonsListFragment newInstance() {
+  public static PersonsListFragment newInstance(ICanNavigate<Person> iCanNavigate) {
     PersonsListFragment fragment = new PersonsListFragment();
+    fragment.setmICanNavigate(iCanNavigate);
     return fragment;
   }
 
@@ -94,7 +95,7 @@ public class PersonsListFragment extends Fragment  implements PersonsListContrac
 
   @Override
   public void onDestroy() {
-//    mPresenter = null;
+//    mListPresenter = null;
     super.onDestroy();
   }
 
@@ -106,5 +107,13 @@ public class PersonsListFragment extends Fragment  implements PersonsListContrac
   @Override
   public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
     mPresenter.onPersonSelect(i);
+  }
+
+  public void setmICanNavigate(ICanNavigate<Person> mICanNavigate) {
+    this.mICanNavigate = mICanNavigate;
+  }
+
+  public ICanNavigate<Person> getmICanNavigate() {
+    return mICanNavigate;
   }
 }

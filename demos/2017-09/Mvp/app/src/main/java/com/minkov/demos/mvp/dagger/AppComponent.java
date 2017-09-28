@@ -2,10 +2,12 @@ package com.minkov.demos.mvp.dagger;
 
 import android.app.Application;
 
+import com.minkov.demos.mvp.ConfigModule;
 import com.minkov.demos.mvp.PersonsApplication;
 import com.minkov.demos.mvp.http.HttpModule;
 import com.minkov.demos.mvp.models.ModelsModule;
 import com.minkov.demos.mvp.repositories.RepositoriesModule;
+import com.minkov.demos.mvp.ui.UiModule;
 import com.minkov.demos.mvp.utils.UtilsModule;
 
 import javax.inject.Singleton;
@@ -22,6 +24,7 @@ import dagger.android.support.AndroidSupportInjectionModule;
 
 @Singleton
 @Component(modules = {
+        ConfigModule.class,
         ApplicationModule.class,
         ActivityBindingModule.class,
         AndroidSupportInjectionModule.class,
@@ -29,6 +32,7 @@ import dagger.android.support.AndroidSupportInjectionModule;
         HttpModule.class,
         UtilsModule.class,
         RepositoriesModule.class,
+        UiModule.class,
 })
 public interface AppComponent extends AndroidInjector<DaggerApplication> {
   void inject(PersonsApplication application);
