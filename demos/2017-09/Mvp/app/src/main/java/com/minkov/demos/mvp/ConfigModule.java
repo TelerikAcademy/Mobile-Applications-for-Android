@@ -1,9 +1,14 @@
 package com.minkov.demos.mvp;
 
+import com.minkov.demos.mvp.utils.schedulers.BaseSchedulerProvider;
+import com.minkov.demos.mvp.utils.schedulers.SchedulerProvider;
+
 import javax.inject.Named;
 
 import dagger.Module;
 import dagger.Provides;
+import io.reactivex.Scheduler;
+import io.reactivex.schedulers.Schedulers;
 
 /**
  * Created by minkov on 9/27/17.

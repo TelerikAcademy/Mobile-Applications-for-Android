@@ -2,6 +2,7 @@ package com.minkov.demos.mvp.PersonDetails;
 
 import com.minkov.demos.mvp.models.Person;
 import com.minkov.demos.mvp.repositories.base.BaseRepository;
+import com.minkov.demos.mvp.utils.schedulers.BaseSchedulerProvider;
 
 import dagger.Module;
 import dagger.Provides;
@@ -19,7 +20,7 @@ public class PersonDetailsModule {
      * @return an instance of {@link PersonDetailsContacts.Presenter}
      */
     @Provides
-    PersonDetailsContacts.Presenter providePersonDetailsPresenter(BaseRepository<Person> repository) {
-        return new PersonDetailsPresenter(repository);
+    PersonDetailsContacts.Presenter providePersonDetailsPresenter(BaseRepository<Person> repository, BaseSchedulerProvider schedulerProvider) {
+        return new PersonDetailsPresenter(repository, schedulerProvider);
     }
 }

@@ -2,17 +2,19 @@ package com.minkov.demos.mvp.PersonsLists;
 
 import com.minkov.demos.mvp.models.Person;
 import com.minkov.demos.mvp.repositories.base.BaseRepository;
+import com.minkov.demos.mvp.utils.schedulers.BaseSchedulerProvider;
 
-import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.functions.Consumer;
-import io.reactivex.schedulers.Schedulers;
 
 /**
+ * Implementation of {@link com.minkov.demos.mvp.PersonsLists.PersonsListContracts.Presenter}
  * Created by minkov on 9/27/17.
  */
 
 public class PersonsListPresenter implements PersonsListContracts.Presenter {
     private final BaseRepository<Person> mRepository;
+    private final BaseSchedulerProvider mScheduleProvider;
+
     private PersonsListContracts.View mView;
     private Person[] mPersons;
     private PersonsListContracts.Router mRouter;
@@ -22,8 +24,9 @@ public class PersonsListPresenter implements PersonsListContracts.Presenter {
      *
      * @param repository a {@link BaseRepository} instance for loading repository
      */
-    public PersonsListPresenter(BaseRepository<Person> repository) {
+    public PersonsListPresenter(BaseRepository<Person> repository, BaseSchedulerProvider schedulerProvider) {
         mRepository = repository;
+        mScheduleProvider = schedulerProvider;
     }
 
     @Override
@@ -31,8 +34,8 @@ public class PersonsListPresenter implements PersonsListContracts.Presenter {
         mView = view;
 
         mRepository.getAll()
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribeOn(Schedulers.newThread())
+                .subscribeOn(mScheduleProvider.io())
+                .observeOn(mScheduleProvider.ui())
                 .subscribe(new Consumer<Person[]>() {
                     @Override
                     public void accept(Person[] persons) throws Exception {

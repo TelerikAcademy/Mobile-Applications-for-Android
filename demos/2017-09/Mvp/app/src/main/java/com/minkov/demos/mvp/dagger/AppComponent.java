@@ -7,6 +7,7 @@ import com.minkov.demos.mvp.PersonsApplication;
 import com.minkov.demos.mvp.http.HttpModule;
 import com.minkov.demos.mvp.models.ModelsModule;
 import com.minkov.demos.mvp.repositories.RepositoriesModule;
+import com.minkov.demos.mvp.utils.UtilsModule;
 
 import javax.inject.Singleton;
 
@@ -27,6 +28,7 @@ import dagger.android.support.AndroidSupportInjectionModule;
         ApplicationModule.class,
         ActivityBindingModule.class,
         AndroidSupportInjectionModule.class,
+        UtilsModule.class,
         ModelsModule.class,
         HttpModule.class,
         RepositoriesModule.class,
@@ -34,6 +36,7 @@ import dagger.android.support.AndroidSupportInjectionModule;
 public interface AppComponent extends AndroidInjector<DaggerApplication> {
     /**
      * Dagger2 inject method
+     *
      * @param application injected by Dagger2
      */
     void inject(PersonsApplication application);
@@ -48,7 +51,6 @@ public interface AppComponent extends AndroidInjector<DaggerApplication> {
     interface Builder {
 
         /**
-         *
          * @param application Used for syntax sugar before build
          * @return the builder
          */
@@ -57,6 +59,7 @@ public interface AppComponent extends AndroidInjector<DaggerApplication> {
 
         /**
          * Used for syntax sugar before build
+         *
          * @return Used for syntax sugar before build
          */
         AppComponent build();
