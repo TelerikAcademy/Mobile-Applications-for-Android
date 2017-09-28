@@ -10,13 +10,23 @@ import dagger.Provides;
 @Module
 public class ModelsModule {
 
-  @Provides
-  Class<Person> providePersonClass() {
-    return Person.class;
-  }
+    /**
+     * Provider for Person.class
+     *
+     * @return the type for {@link Person}
+     */
+    @Provides
+    Class<Person> providePersonClass() {
+        return Person.class;
+    }
 
-  @Provides
-  Class<Person[]> providePersonArrayClass() {
-    return Person[].class;
-  }
+    /**
+     * Provider for Person[].class
+     *
+     * @return the type for array of {@link Person[]}
+     */
+    @Provides
+    Class<Person[]> providePersonArrayClass() {
+        return Person[].class;
+    }
 }

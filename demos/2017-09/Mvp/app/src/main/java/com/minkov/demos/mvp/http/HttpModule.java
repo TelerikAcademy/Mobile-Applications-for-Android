@@ -5,7 +5,6 @@ import com.minkov.demos.mvp.models.Person;
 import java.util.HashMap;
 import java.util.Map;
 
-import javax.inject.Inject;
 import javax.inject.Named;
 
 import dagger.Module;
@@ -17,18 +16,26 @@ import dagger.Provides;
 
 @Module
 public class HttpModule {
-  Map<String, Url> urls;
-  static final String PEOPLE_URL_SUFFIX = "api/people/";
+    static final String PEOPLE_URL_SUFFIX = "api/people/";
 
-  public HttpModule() {
-    urls = new HashMap<>();
-  }
+    private Map<String, Url> mUrls;
 
-  @Provides
-  Url<Person> providePersonsUrl(@Named("base-url") String baseUrl, Class<Person> p) {
-    if(urls.containsKey(PEOPLE_URL_SUFFIX) == false) {
-      urls.put(PEOPLE_URL_SUFFIX, new Url<>(baseUrl + PEOPLE_URL_SUFFIX));
+    /**
+     * @param baseUrl the url base of the RESTful API
+     * @param klass   used only so the Dagger can differentiate urls for different RESTful API endpoints
+     * @return the wrapper url for the person entity
+     */
+
+    @Provides
+    Url<Person> providePersonsUrl(@Named("base-url") String baseUrl, Class<Person> klass) {
+        if (mUrls == null) {
+            mUrls = new HashMap<>();
+        }
+
+        if (mUrls.containsKey(PEOPLE_URL_SUFFIX) == false) {
+            mUrls.put(PEOPLE_URL_SUFFIX, new Url<>(baseUrl + PEOPLE_URL_SUFFIX));
+        }
+
+        return mUrls.get(PEOPLE_URL_SUFFIX);
     }
-    return urls.get(PEOPLE_URL_SUFFIX);
-  }
 }

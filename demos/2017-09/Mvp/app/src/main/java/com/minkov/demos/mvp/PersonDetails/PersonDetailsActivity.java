@@ -8,28 +8,34 @@ import javax.inject.Inject;
 
 import dagger.android.support.DaggerAppCompatActivity;
 
+/**
+ * Implementation of {@link com.minkov.demos.mvp.PersonDetails.PersonDetailsContacts.View}
+ */
 public class PersonDetailsActivity extends DaggerAppCompatActivity {
-  public static final String EXTRA_PERSON_KEY = "EXTRA_PERSON_ID";
+    /**
+     * Value for setting values in intents
+     */
+    public static final String EXTRA_PERSON_KEY = "EXTRA_PERSON_ID";
 
-  @Inject
-  PersonDetailsContacts.Presenter mPresenter;
+    @Inject
+    PersonDetailsContacts.Presenter mPresenter;
 
-  PersonDetailsFragment mView;
+    PersonDetailsFragment mView;
 
-  @Override
-  protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
-    setContentView(R.layout.activity_person_details);
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_person_details);
 
-    String id = getIntent().getStringExtra(EXTRA_PERSON_KEY);
+        String id = getIntent().getStringExtra(EXTRA_PERSON_KEY);
 
-    mView = PersonDetailsFragment.newInstance();
-    mPresenter.setPersonId(id);
-    mView.setPresenter(mPresenter);
+        mView = PersonDetailsFragment.newInstance();
+        mPresenter.setPersonId(id);
+        mView.setPresenter(mPresenter);
 
-    getSupportFragmentManager()
-            .beginTransaction()
-            .replace(R.id.frame_content, mView)
-            .commit();
-  }
+        getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.frame_content, mView)
+                .commit();
+    }
 }

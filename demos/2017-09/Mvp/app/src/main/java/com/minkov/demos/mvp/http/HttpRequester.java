@@ -18,47 +18,63 @@ import okhttp3.Response;
 
 public class HttpRequester {
 
-  private final OkHttpClient mClient;
+    private final OkHttpClient mClient;
 
-  @Inject
-  public HttpRequester() {
-    mClient = new OkHttpClient();
-  }
+    /**
+     * Creates a {@link HttpRequester} object
+     */
+    @Inject
+    public HttpRequester() {
+        mClient = new OkHttpClient();
+    }
 
-  private Observable<String> makeRequest(final Request req) {
-    return Observable.create(new ObservableOnSubscribe<String>() {
-      @Override
-      public void subscribe(@NonNull ObservableEmitter<String> e) throws Exception {
-        Response res = mClient.newCall(req)
-                .execute();
+    private Observable<String> makeRequest(final Request req) {
+        return Observable.create(new ObservableOnSubscribe<String>() {
+            @Override
+            public void subscribe(@NonNull ObservableEmitter<String> e) throws Exception {
+                Response res = mClient.newCall(req)
+                        .execute();
 
-        String bodyString = res.body().string();
-        e.onNext(bodyString);
-        e.onComplete();
-      }
-    });
-  }
+                String bodyString = res.body().string();
+                e.onNext(bodyString);
+                e.onComplete();
+            }
+        });
+    }
 
-  public Observable<String> get(String url) {
-    Request req = new Request.Builder()
-            .get()
-            .url(url)
-            .build();
+    /**
+     * Performs a HTTP get
+     *
+     * @param url the endpoint
+     * @return RxObservable to handle the requests
+     */
+    public Observable<String> get(String url) {
+        Request req = new Request.Builder()
+                .get()
+                .url(url)
+                .build();
 
-    return makeRequest(req);
-  }
+        return makeRequest(req);
+    }
 
-  public Observable<String> post(String url, String bodyString){
-    RequestBody body = RequestBody.create(
-            MediaType.parse("application/json"),
-            bodyString
-    );
+    /**
+     * Performs a HTTP post
+     *
+     * @param url        the endpoint
+     * @param bodyString the body of the request
+     * @return RxObservable to handle the requests
+     */
+    public Observable<String> post(String url, String bodyString) {
+        RequestBody body = RequestBody.create(
+                MediaType.parse("application/json"),
+                bodyString
+        );
 
-    Request req = new Request.Builder()
-            .post(body)
-            .url(url)
-            .build();
+        Request req = new Request.Builder()
+                .post(body)
+                .url(url)
+                .build();
 
-    return makeRequest(req);
-  }
+        return makeRequest(req);
+    }
 }

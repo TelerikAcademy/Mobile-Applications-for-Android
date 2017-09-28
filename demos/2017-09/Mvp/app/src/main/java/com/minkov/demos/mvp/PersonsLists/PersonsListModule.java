@@ -1,9 +1,7 @@
 package com.minkov.demos.mvp.PersonsLists;
 
-import android.content.Context;
-
-import com.minkov.demos.mvp.repositories.base.BaseRepository;
 import com.minkov.demos.mvp.models.Person;
+import com.minkov.demos.mvp.repositories.base.BaseRepository;
 
 import dagger.Module;
 import dagger.Provides;
@@ -14,8 +12,14 @@ import dagger.Provides;
 
 @Module()
 public class PersonsListModule {
-  @Provides
-  PersonsListContracts.Presenter providePersonsListPresenter(BaseRepository<Person> data, Context context) {
-    return new PersonsListPresenter(data);
-  }
+    /**
+     * Provides a concrete presenter for {@link com.minkov.demos.mvp.PersonsLists.PersonsListContracts.Presenter }
+     *
+     * @param repository {@link BaseRepository} instance for loading the data
+     * @return an instance of {@link com.minkov.demos.mvp.PersonsLists.PersonsListContracts.Presenter}
+     */
+    @Provides
+    PersonsListContracts.Presenter providePersonsListPresenter(BaseRepository<Person> repository) {
+        return new PersonsListPresenter(repository);
+    }
 }

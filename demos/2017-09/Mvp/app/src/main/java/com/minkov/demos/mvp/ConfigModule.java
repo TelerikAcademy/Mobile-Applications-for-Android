@@ -11,14 +11,19 @@ import dagger.Provides;
 
 @Module
 public class ConfigModule {
-  private static final String BASE_URL = "http://192.168.160.7:3001/";
+    // Mac
+    // private static final String BASE_URL = "http://192.168.160.7:3001/";
 
-  public ConfigModule() {
-  }
+    // PC
+    private static final String BASE_URL = "http://192.168.168.44:3001/";
 
-  @Provides
-  @Named("base-url")
-  String providesBaseUrl() {
-    return BASE_URL;
-  }
+    /**
+     * Provide {@link String} named "base-url"
+     * @return the url base of the RESTfull api
+     */
+    @Provides
+    @Named("base-url")
+    String providesBaseUrl() {
+        return BASE_URL;
+    }
 }

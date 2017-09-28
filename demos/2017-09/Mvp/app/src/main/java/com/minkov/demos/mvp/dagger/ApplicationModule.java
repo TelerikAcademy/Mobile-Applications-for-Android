@@ -3,11 +3,8 @@ package com.minkov.demos.mvp.dagger;
 import android.app.Application;
 import android.content.Context;
 
-import javax.inject.Singleton;
-
 import dagger.Binds;
 import dagger.Module;
-import dagger.Provides;
 
 /**
  * Created by minkov on 9/27/17.
@@ -15,6 +12,11 @@ import dagger.Provides;
 
 @Module
 public abstract class ApplicationModule {
-  @Binds
-  abstract Context bindContext(Application application);
+    /**
+     * Binding the application context
+     * @param application the application
+     * @return the ApplicationContext
+     */
+    @Binds
+    abstract Context bindContext(Application application);
 }

@@ -2,7 +2,6 @@ package com.minkov.demos.mvp.PersonsLists;
 
 
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -15,105 +14,105 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.minkov.demos.mvp.PersonDetails.PersonDetailsActivity;
 import com.minkov.demos.mvp.R;
 import com.minkov.demos.mvp.models.Person;
-import com.minkov.demos.mvp.ui.base.ICanNavigate;
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class PersonsListFragment extends Fragment  implements PersonsListContracts.View, AdapterView.OnItemClickListener {
+public class PersonsListFragment extends Fragment
+        implements PersonsListContracts.View, AdapterView.OnItemClickListener {
+    private ListView mListViewPersons;
+    private ArrayAdapter<Person> mPersonsAdapter;
+    private PersonsListContracts.Presenter mPresenter;
 
+    /**
+     * Empty constructor is mandatory for fragments
+     */
+    public PersonsListFragment() {
+    }
 
-  private ListView mListViewPersons;
-  private ArrayAdapter<Person> mPersonsAdapter;
-  private PersonsListContracts.Presenter mPresenter;
-  private ICanNavigate<Person> mICanNavigate;
+    /**
+     * Factory method for creating a new instance of {@link PersonsListFragment}
+     *
+     * @return the instance
+     */
+    public static PersonsListFragment newInstance() {
+        PersonsListFragment fragment = new PersonsListFragment();
+        return fragment;
+    }
 
-  public PersonsListFragment() {
-  }
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        View root = inflater.inflate(R.layout.fragment_persons_list, container, false);
 
-  @Override
-  public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                           Bundle savedInstanceState) {
-    View root = inflater.inflate(R.layout.fragment_persons_list, container, false);
+        mPersonsAdapter = new ArrayAdapter<Person>(getContext(), android.R.layout.simple_list_item_1) {
+            @NonNull
+            @Override
+            public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+                TextView view = null;
 
-    mPersonsAdapter = new ArrayAdapter<Person>(getContext(), android.R.layout.simple_list_item_1) {
-      @NonNull
-      @Override
-      public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-        TextView view = null;
+                if (convertView == null || !(convertView instanceof TextView)) {
+                    LayoutInflater viewInflater
+                            = (LayoutInflater) getContext()
+                            .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
-        if (convertView == null || !(convertView instanceof TextView)) {
-          LayoutInflater viewInflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-          view = (TextView) viewInflater.inflate(android.R.layout.simple_list_item_1, null);
-        } else {
-          view = (TextView) convertView;
-        }
+                    view = (TextView) viewInflater.inflate(android.R.layout.simple_list_item_1, null);
+                } else {
+                    view = (TextView) convertView;
+                }
 
-        view.setText(getItem(position).getName());
+                view.setText(getItem(position).getName());
 
-        return view;
-      }
-    };
+                return view;
+            }
+        };
 
-    mListViewPersons = root.findViewById(R.id.lv_persons);
-    mListViewPersons.setAdapter(mPersonsAdapter);
-    mListViewPersons.setOnItemClickListener(this);
+        mListViewPersons = root.findViewById(R.id.lv_persons);
+        mListViewPersons.setAdapter(mPersonsAdapter);
+        mListViewPersons.setOnItemClickListener(this);
 
-    return root;
-  }
+        return root;
+    }
 
-  public void setPersons(Person[] persons) {
-    mPersonsAdapter.clear();
-    mPersonsAdapter.addAll(persons);
-  }
+    /**
+     * Sets the data to visualize
+     *
+     * @param persons array of objects to visualize
+     */
+    public void setPersons(Person[] persons) {
+        mPersonsAdapter.clear();
+        mPersonsAdapter.addAll(persons);
+    }
 
-  @Override
-  public void showDetailsWith(Person mPerson) {
-    mICanNavigate.navigateWith(mPerson);
-  }
+    @Override
+    public void onResume() {
+        mPresenter.subscribe(this);
+        super.onResume();
+    }
 
-  public static PersonsListFragment newInstance(ICanNavigate<Person> iCanNavigate) {
-    PersonsListFragment fragment = new PersonsListFragment();
-    fragment.setmICanNavigate(iCanNavigate);
-    return fragment;
-  }
+    @Override
+    public void onPause() {
+        mPresenter.unsubscribe();
+        super.onPause();
+    }
 
-  @Override
-  public void onResume() {
-    mPresenter.subscribe(this);
-    super.onResume();
-  }
+    @Override
+    public void onDestroy() {
+//    mPersonsListPresenter = null;
+        super.onDestroy();
+        mPresenter.unsubscribe();
+        mPresenter = null;
+    }
 
-  @Override
-  public void onPause() {
-    mPresenter.unsubscribe();
-    super.onPause();
-  }
+    @Override
+    public void setPresenter(PersonsListContracts.Presenter presenter) {
+        mPresenter = presenter;
+    }
 
-  @Override
-  public void onDestroy() {
-//    mListPresenter = null;
-    super.onDestroy();
-  }
-
-  @Override
-  public void setPresenter(PersonsListContracts.Presenter presenter) {
-    mPresenter = presenter;
-  }
-
-  @Override
-  public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-    mPresenter.onPersonSelect(i);
-  }
-
-  public void setmICanNavigate(ICanNavigate<Person> mICanNavigate) {
-    this.mICanNavigate = mICanNavigate;
-  }
-
-  public ICanNavigate<Person> getmICanNavigate() {
-    return mICanNavigate;
-  }
+    @Override
+    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+        mPresenter.onPersonSelect(i);
+    }
 }

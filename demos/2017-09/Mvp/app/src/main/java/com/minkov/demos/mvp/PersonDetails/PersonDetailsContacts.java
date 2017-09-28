@@ -4,17 +4,33 @@ import com.minkov.demos.mvp.base.BaseContracts;
 import com.minkov.demos.mvp.models.Person;
 
 /**
+ * Contracts for PersonDetails {@link com.minkov.demos.mvp.base.BaseContracts.View},
+ * {@link com.minkov.demos.mvp.base.BaseContracts.Presenter} and
+ * {@link com.minkov.demos.mvp.base.BaseContracts.Router}
  * Created by minkov on 9/27/17.
  */
-
 public interface PersonDetailsContacts {
-  public interface View extends BaseContracts.View<Presenter> {
+    /**
+     * Base view for PersonDetails
+     */
+    interface View extends BaseContracts.View<Presenter> {
+        /**
+         * Sets the presenter
+         *
+         * @param person object to visualize
+         */
+        void setPerson(Person person);
+    }
 
-    void setPerson(Person person);
-  }
+    /**
+     * Base presenter for PersonDetails
+     */
+    interface Presenter extends BaseContracts.Presenter<View> {
 
-  public interface Presenter extends BaseContracts.Presenter<View> {
-
-    void setPersonId(String id);
-  }
+        /**
+         * Prepate the person to load
+         * @param id a {@link String}
+         */
+        void setPersonId(String id);
+    }
 }

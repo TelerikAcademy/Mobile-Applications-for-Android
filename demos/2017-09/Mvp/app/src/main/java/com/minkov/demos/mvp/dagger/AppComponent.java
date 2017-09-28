@@ -7,8 +7,6 @@ import com.minkov.demos.mvp.PersonsApplication;
 import com.minkov.demos.mvp.http.HttpModule;
 import com.minkov.demos.mvp.models.ModelsModule;
 import com.minkov.demos.mvp.repositories.RepositoriesModule;
-import com.minkov.demos.mvp.ui.UiModule;
-import com.minkov.demos.mvp.utils.UtilsModule;
 
 import javax.inject.Singleton;
 
@@ -19,6 +17,7 @@ import dagger.android.DaggerApplication;
 import dagger.android.support.AndroidSupportInjectionModule;
 
 /**
+ * AppComponent module for Dagger
  * Created by minkov on 9/27/17.
  */
 
@@ -30,22 +29,36 @@ import dagger.android.support.AndroidSupportInjectionModule;
         AndroidSupportInjectionModule.class,
         ModelsModule.class,
         HttpModule.class,
-        UtilsModule.class,
         RepositoriesModule.class,
-        UiModule.class,
 })
 public interface AppComponent extends AndroidInjector<DaggerApplication> {
-  void inject(PersonsApplication application);
+    /**
+     * Dagger2 inject method
+     * @param application injected by Dagger2
+     */
+    void inject(PersonsApplication application);
 
-  @Override
-  void inject(DaggerApplication instance);
+    @Override
+    void inject(DaggerApplication instance);
 
-  @Component.Builder
-  interface Builder {
+    /**
+     * Used for syntax sugar before build
+     */
+    @Component.Builder
+    interface Builder {
 
-    @BindsInstance
-    AppComponent.Builder application(Application application);
+        /**
+         *
+         * @param application Used for syntax sugar before build
+         * @return the builder
+         */
+        @BindsInstance
+        AppComponent.Builder application(Application application);
 
-    AppComponent build();
-  }
+        /**
+         * Used for syntax sugar before build
+         * @return Used for syntax sugar before build
+         */
+        AppComponent build();
+    }
 }
