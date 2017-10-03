@@ -4,6 +4,8 @@ import com.minkov.demos.mvp.models.Person;
 import com.minkov.demos.mvp.repositories.base.BaseRepository;
 import com.minkov.demos.mvp.utils.schedulers.BaseSchedulerProvider;
 
+import javax.inject.Named;
+
 import dagger.Module;
 import dagger.Provides;
 
@@ -20,7 +22,9 @@ public class PersonDetailsModule {
      * @return an instance of {@link PersonDetailsContacts.Presenter}
      */
     @Provides
-    PersonDetailsContacts.Presenter providePersonDetailsPresenter(BaseRepository<Person> repository, BaseSchedulerProvider schedulerProvider) {
+    PersonDetailsContacts.Presenter providePersonDetailsPresenter(
+            @Named("remote") BaseRepository<Person> repository,
+            BaseSchedulerProvider schedulerProvider) {
         return new PersonDetailsPresenter(repository, schedulerProvider);
     }
 }

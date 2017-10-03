@@ -1,31 +1,39 @@
 package com.minkov.demos.mvp.models;
 
-/**
- * Created by minkov on 9/27/17.
- */
+import org.greenrobot.greendao.annotation.Entity;
+import org.greenrobot.greendao.annotation.Generated;
+import org.greenrobot.greendao.annotation.Id;
+import org.greenrobot.greendao.annotation.Property;
 
-@SuppressWarnings("checkstyle:all")
+@Entity(nameInDb = "person")
 public class Person {
-    private String name;
+    //CHECKSTYLE:OFF
+    @Id
     private String id;
+
+    @Property(nameInDb = "name")
+    private String name;
     //CHECKSTYLE:ON
+
+    /**
+     * Empty constructor is necessary for GreenDao
+     */
+    public Person() {
+        this("");
+    }
 
     /**
      * Creates a person
      * @param name a {@link String}
      */
     public Person(String name) {
-        this(null, name);
+        setName(name);
     }
 
-    /**
-     * Creates a person
-      * @param id a {@link String}
-     * @param name a {@link String}
-     */
+    @Generated(hash = 376276960)
     public Person(String id, String name) {
-        setId(id);
-        setName(name);
+        this.id = id;
+        this.name = name;
     }
 
     public String getName() {
@@ -37,7 +45,7 @@ public class Person {
     }
 
     public String getId() {
-        return id;
+        return this.id;
     }
 
     public void setId(String id) {

@@ -6,6 +6,9 @@ import com.minkov.demos.mvp.models.Person;
 import com.minkov.demos.mvp.repositories.base.BaseRepository;
 import com.minkov.demos.mvp.utils.JsonParser;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.inject.Inject;
 
 import io.reactivex.Observable;
@@ -38,13 +41,19 @@ public class GenericHttpRepository<T> implements BaseRepository<T> {
     }
 
     @Override
-    public Observable<T[]> getAll() {
+    public Observable<List<T>> getAll() {
         return mHttpRequester.get(mUrl)
-                .map(new Function<String, T[]>() {
+                .map(new Function<String, List<T>>() {
                     @Override
-                    public T[] apply(@NonNull String personsString) throws Exception {
+                    public List<T> apply(@NonNull String personsString) throws Exception {
                         T[] objects = mJsonParser.parseArrayFromJson(personsString);
-                        return objects;
+                        List<T> list = new ArrayList<>();
+                        for (T obj :
+                                objects) {
+                            list.add(obj);
+                        }
+                        
+                        return list;
                     }
                 });
     }
@@ -70,5 +79,10 @@ public class GenericHttpRepository<T> implements BaseRepository<T> {
                         return mJsonParser.parseFromJson(s);
                     }
                 });
+    }
+
+    @Override
+    public void clear() {
+
     }
 }

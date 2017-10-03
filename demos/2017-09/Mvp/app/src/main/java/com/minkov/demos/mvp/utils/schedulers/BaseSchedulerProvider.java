@@ -9,12 +9,25 @@ import io.reactivex.Scheduler;
  */
 
 public interface BaseSchedulerProvider {
+    /**
+     * Provides computation Scheduler
+     * @return computation Scheduler
+     */
     @NonNull
     Scheduler computation();
 
+    /**
+     * Provides Input/Output Scheduler
+     * @return Input/Output Scheduler
+     */
     @NonNull
     Scheduler io();
 
+
+    /**
+     * Provides ui tread scheduler
+     * @return Provides ui tread scheduler
+     */
     @NonNull
     Scheduler ui();
 }

@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Mvp.iml" filepath="$PROJECT_DIR$/Mvp.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/custom-checkstyle/custom-checkstyle.iml" filepath="$PROJECT_DIR$/custom-checkstyle/custom-checkstyle.iml" />
+      <module fileurl="file://$PROJECT_DIR$/custom-checkstyle/custom-checkstyle.iml" filepath="$PROJECT_DIR$/custom-checkstyle/custom-checkstyle.iml" />
     </modules>
   </component>
 </project>

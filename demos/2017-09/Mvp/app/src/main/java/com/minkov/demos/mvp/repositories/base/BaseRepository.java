@@ -1,5 +1,7 @@
 package com.minkov.demos.mvp.repositories.base;
 
+import java.util.List;
+
 import io.reactivex.Observable;
 
 /**
@@ -14,7 +16,7 @@ public interface BaseRepository<T> {
      *
      * @return array of objects
      */
-    Observable<T[]> getAll();
+    Observable<List<T>> getAll();
 
     /**
      * Creates a new object of type @{T}
@@ -31,4 +33,6 @@ public interface BaseRepository<T> {
      * @return the found object
      */
     Observable<T> getById(String id);
+
+    void clear();
 }

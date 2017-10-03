@@ -6,9 +6,13 @@ import android.os.Bundle;
 import com.minkov.demos.mvp.PersonDetails.PersonDetailsActivity;
 import com.minkov.demos.mvp.PersonDetails.PersonDetailsContacts;
 import com.minkov.demos.mvp.PersonDetails.PersonDetailsFragment;
+import com.minkov.demos.mvp.PersonsApplication;
 import com.minkov.demos.mvp.R;
 import com.minkov.demos.mvp.models.Person;
+import com.minkov.demos.mvp.models.PersonDao;
 import com.minkov.demos.mvp.ui.ActivityUtils;
+
+import java.util.List;
 
 import javax.inject.Inject;
 
@@ -18,15 +22,16 @@ import dagger.android.support.DaggerAppCompatActivity;
  * The implementation of the {@link com.minkov.demos.mvp.PersonsLists.PersonsListContracts.View} class
  */
 public class PersonsListActivity extends DaggerAppCompatActivity implements PersonsListContracts.Router {
+    // CHECKSTYLE:OFF
     @Inject
     PersonsListContracts.Presenter mPersonsListPresenter;
+    // CHECKSTYLE:ON
 
     @Inject
     PersonDetailsContacts.Presenter mPersonDetailsPresenter;
 
     private PersonsListFragment mPersonsListView;
     private PersonDetailsFragment mPersonDetailsView;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +45,6 @@ public class PersonsListActivity extends DaggerAppCompatActivity implements Pers
         if (isTablet()) {
             mPersonDetailsView = PersonDetailsFragment.newInstance();
             mPersonDetailsView.setPresenter(mPersonDetailsPresenter);
-            // mPersonDetailsPresenter.setRouter(this);
             ActivityUtils.attachFragment(getSupportFragmentManager(), R.id.frame_details, mPersonDetailsView);
         }
     }

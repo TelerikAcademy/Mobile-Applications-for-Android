@@ -26,7 +26,8 @@ public class PersonDetailsPresenter implements PersonDetailsContacts.Presenter {
      * @param repository a {@link BaseRepository} instance for loading data
      */
     @Inject
-    public PersonDetailsPresenter(BaseRepository<Person> repository, BaseSchedulerProvider schedulerProvider) {
+    public PersonDetailsPresenter(BaseRepository<Person> repository,
+                                  BaseSchedulerProvider schedulerProvider) {
         mRepository = repository;
         mScheduleProvider = schedulerProvider;
     }
@@ -43,12 +44,13 @@ public class PersonDetailsPresenter implements PersonDetailsContacts.Presenter {
         }
 
         mRepository.getById(mPersonId)
-                .observeOn(mScheduleProvider.io())
-                .subscribeOn(mScheduleProvider.ui())
+                .subscribeOn(mScheduleProvider.io())
+                .observeOn(mScheduleProvider.ui())
                 .subscribe(new Consumer<Person>() {
                     @Override
                     public void accept(Person person) throws Exception {
                         mView.setPerson(person);
+
                     }
                 });
     }
