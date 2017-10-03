@@ -6,13 +6,9 @@ import android.os.Bundle;
 import com.minkov.demos.mvp.PersonDetails.PersonDetailsActivity;
 import com.minkov.demos.mvp.PersonDetails.PersonDetailsContacts;
 import com.minkov.demos.mvp.PersonDetails.PersonDetailsFragment;
-import com.minkov.demos.mvp.PersonsApplication;
 import com.minkov.demos.mvp.R;
 import com.minkov.demos.mvp.models.Person;
-import com.minkov.demos.mvp.models.PersonDao;
 import com.minkov.demos.mvp.ui.ActivityUtils;
-
-import java.util.List;
 
 import javax.inject.Inject;
 

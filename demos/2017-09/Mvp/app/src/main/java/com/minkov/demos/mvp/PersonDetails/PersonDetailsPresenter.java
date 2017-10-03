@@ -24,6 +24,7 @@ public class PersonDetailsPresenter implements PersonDetailsContacts.Presenter {
      * Initializes a new {@link PersonDetailsPresenter}
      *
      * @param repository a {@link BaseRepository} instance for loading data
+     * @param schedulerProvider {@link BaseSchedulerProvider} instance for control of the async operations
      */
     @Inject
     public PersonDetailsPresenter(BaseRepository<Person> repository,

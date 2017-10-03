@@ -27,9 +27,10 @@ public class GenericHttpRepository<T> implements BaseRepository<T> {
 
     /**
      * Initializes a {@link GenericHttpRepository} object
+     *
      * @param httpRequester create HTTP requests
-     * @param jsonParser parses strings to <T> objects
-     * @param url the url wrapper
+     * @param jsonParser    parses strings to <T> objects
+     * @param url           the url wrapper
      */
     @Inject
     public GenericHttpRepository(HttpRequester httpRequester,
@@ -48,11 +49,10 @@ public class GenericHttpRepository<T> implements BaseRepository<T> {
                     public List<T> apply(@NonNull String personsString) throws Exception {
                         T[] objects = mJsonParser.parseArrayFromJson(personsString);
                         List<T> list = new ArrayList<>();
-                        for (T obj :
-                                objects) {
+                        for (T obj : objects) {
                             list.add(obj);
                         }
-                        
+
                         return list;
                     }
                 });

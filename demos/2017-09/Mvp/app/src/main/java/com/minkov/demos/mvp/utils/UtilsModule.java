@@ -13,6 +13,11 @@ import dagger.Provides;
 
 @Module
 public class UtilsModule {
+
+    /**
+     * Provides a {@link BaseSchedulerProvider} instance
+     * @return a {@link SchedulerProvider} instance
+     */
     @Provides
     BaseSchedulerProvider provideBaseSchedulerProvider() {
         return SchedulerProvider.getInstance();

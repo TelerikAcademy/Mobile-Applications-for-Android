@@ -9,10 +9,11 @@ import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
 
 /**
+ * SchedulerProvider for providing {@link Scheduler} instances, based on need
  * Created by doncho on 9/28/17.
  */
 
-public class SchedulerProvider implements BaseSchedulerProvider {
+public final class SchedulerProvider implements BaseSchedulerProvider {
 
     @Nullable
     private static SchedulerProvider instance;
@@ -20,8 +21,13 @@ public class SchedulerProvider implements BaseSchedulerProvider {
     private SchedulerProvider() {
     }
 
+    /**
+     * Getter for singleton instance of {@link SchedulerProvider}
+     *
+     * @return the Singleton instance
+     */
     public static synchronized SchedulerProvider getInstance() {
-        if(instance == null) {
+        if (instance == null) {
             instance = new SchedulerProvider();
         }
 

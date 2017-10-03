@@ -9,13 +9,17 @@ import java.util.List;
 import io.reactivex.Observable;
 
 /**
- * Created by minkov on 10/2/17.
+ * Generic repository for CRUD operations with local(cached) data
+ * @param <T> the type of the model
  */
-
 public class GenericCacheRepository<T> implements BaseRepository<T> {
 
     private final AbstractDao<T, String> mDao;
 
+    /**
+     * Creates a {@link GenericCacheRepository} instance
+     * @param dao a GreenDao instance to work with SQLite
+     */
     public GenericCacheRepository(AbstractDao<T, String> dao) {
         mDao = dao;
     }

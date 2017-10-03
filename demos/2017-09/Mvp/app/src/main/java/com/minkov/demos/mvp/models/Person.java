@@ -5,6 +5,11 @@ import org.greenrobot.greendao.annotation.Generated;
 import org.greenrobot.greendao.annotation.Id;
 import org.greenrobot.greendao.annotation.Property;
 
+/**
+ * Model for storing Person information
+ * Contains Id and name
+ */
+
 @Entity(nameInDb = "person")
 public class Person {
     //CHECKSTYLE:OFF
@@ -23,7 +28,7 @@ public class Person {
     }
 
     /**
-     * Creates a person
+     * Creates a Person instance
      * @param name a {@link String}
      */
     public Person(String name) {

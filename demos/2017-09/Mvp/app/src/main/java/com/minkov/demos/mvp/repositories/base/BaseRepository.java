@@ -34,5 +34,8 @@ public interface BaseRepository<T> {
      */
     Observable<T> getById(String id);
 
+    /**
+     * Clear all the data from the provided <T> Model
+      */
     void clear();
 }

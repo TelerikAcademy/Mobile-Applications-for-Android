@@ -6,13 +6,7 @@ import com.minkov.demos.mvp.utils.schedulers.BaseSchedulerProvider;
 
 import java.util.List;
 
-import javax.inject.Named;
-
-import io.reactivex.Notification;
 import io.reactivex.Observable;
-import io.reactivex.Observer;
-import io.reactivex.annotations.NonNull;
-import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Consumer;
 
 /**
@@ -21,7 +15,7 @@ import io.reactivex.functions.Consumer;
  */
 
 public class PersonsListPresenter implements PersonsListContracts.Presenter {
-    private final BaseRepository<Person> mRemoteRepository;
+    private final BaseRepository<Person> mHttpRepository;
     private final BaseRepository<Person> mCacheRepository;
 
     private final BaseSchedulerProvider mScheduleProvider;
@@ -34,14 +28,15 @@ public class PersonsListPresenter implements PersonsListContracts.Presenter {
     /**
      * Creates a {@link PersonsListPresenter} instance
      *
-     * @param remoteRepository  - instance of {@link BaseRepository} to providing persons
+     * @param httpRepository    - instance of {@link BaseRepository} to providing persons from http
+     * @param cacheRepository   - instance of {@link BaseRepository} to providing persons from cache
      * @param schedulerProvider - instance of {@link BaseSchedulerProvider} for providing types of async operations
      */
     public PersonsListPresenter(
-            BaseRepository<Person> remoteRepository,
+            BaseRepository<Person> httpRepository,
             BaseRepository<Person> cacheRepository,
             BaseSchedulerProvider schedulerProvider) {
-        mRemoteRepository = remoteRepository;
+        mHttpRepository = httpRepository;
         mCacheRepository = cacheRepository;
         mScheduleProvider = schedulerProvider;
     }
@@ -52,36 +47,10 @@ public class PersonsListPresenter implements PersonsListContracts.Presenter {
         load();
     }
 
-    public void load() {
+    private void load() {
         Observable obs = mHasCache
                 ? mCacheRepository.getAll()
-                : mRemoteRepository.getAll()
-                .doOnEach(new Observer<List<Person>>() {
-                    @Override
-                    public void onSubscribe(@NonNull Disposable d) {
-
-                    }
-
-                    @Override
-                    public void onNext(@NonNull List<Person> persons) {
-                        mCacheRepository.clear();
-                        for (Person person :
-                                persons) {
-                            mCacheRepository.add(person);
-                        }
-                    }
-
-                    @Override
-                    public void onError(@NonNull Throwable e) {
-
-                    }
-
-                    @Override
-                    public void onComplete() {
-
-                    }
-                });
-        mHasCache = true;
+                : mHttpRepository.getAll();
 
         obs.subscribeOn(mScheduleProvider.io())
                 .observeOn(mScheduleProvider.ui())
@@ -93,6 +62,13 @@ public class PersonsListPresenter implements PersonsListContracts.Presenter {
                             mPersons[i] = persons.get(i);
                         }
                         mView.setPersons(mPersons);
+                        if (mHasCache) {
+                            for (Person p
+                                    : persons) {
+                                mCacheRepository.add(p);
+                            }
+                        }
+                        mHasCache = true;
                     }
                 }, new Consumer<Throwable>() {
                     @Override

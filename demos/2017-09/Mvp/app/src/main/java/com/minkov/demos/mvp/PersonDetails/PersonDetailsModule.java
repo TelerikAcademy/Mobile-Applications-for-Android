@@ -19,6 +19,7 @@ public class PersonDetailsModule {
      * Provides a concrete presenter for {@link com.minkov.demos.mvp.PersonDetails.PersonDetailsContacts.Presenter}
      *
      * @param repository {@link BaseRepository} instance for loading the data
+     * @param schedulerProvider {@link BaseSchedulerProvider} instance for control of the async operations
      * @return an instance of {@link PersonDetailsContacts.Presenter}
      */
     @Provides
