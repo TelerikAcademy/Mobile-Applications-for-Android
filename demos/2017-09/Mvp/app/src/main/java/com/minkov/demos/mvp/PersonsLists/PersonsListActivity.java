@@ -2,7 +2,9 @@ package com.minkov.demos.mvp.PersonsLists;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 
+import com.minkov.demos.mvp.BaseActivity;
 import com.minkov.demos.mvp.PersonDetails.PersonDetailsActivity;
 import com.minkov.demos.mvp.PersonDetails.PersonDetailsContacts;
 import com.minkov.demos.mvp.PersonDetails.PersonDetailsFragment;
@@ -12,12 +14,10 @@ import com.minkov.demos.mvp.ui.ActivityUtils;
 
 import javax.inject.Inject;
 
-import dagger.android.support.DaggerAppCompatActivity;
-
 /**
  * The implementation of the {@link com.minkov.demos.mvp.PersonsLists.PersonsListContracts.View} class
  */
-public class PersonsListActivity extends DaggerAppCompatActivity implements PersonsListContracts.Router {
+public class PersonsListActivity extends BaseActivity implements PersonsListContracts.Router {
     // CHECKSTYLE:OFF
     @Inject
     PersonsListContracts.Presenter mPersonsListPresenter;
@@ -43,6 +43,8 @@ public class PersonsListActivity extends DaggerAppCompatActivity implements Pers
             mPersonDetailsView.setPresenter(mPersonDetailsPresenter);
             ActivityUtils.attachFragment(getSupportFragmentManager(), R.id.frame_details, mPersonDetailsView);
         }
+
+        setupDrawer();
     }
 
     @Override
@@ -65,5 +67,10 @@ public class PersonsListActivity extends DaggerAppCompatActivity implements Pers
 
     private boolean isTablet() {
         return ActivityUtils.containsView(this, R.id.frame_details);
+    }
+
+    @Override
+    protected Toolbar getToolbar() {
+        return findViewById(R.id.toolbar);
     }
 }

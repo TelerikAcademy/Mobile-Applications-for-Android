@@ -1,7 +1,9 @@
 package com.minkov.demos.mvp.PersonDetails;
 
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 
+import com.minkov.demos.mvp.BaseActivity;
 import com.minkov.demos.mvp.R;
 
 import javax.inject.Inject;
@@ -11,7 +13,7 @@ import dagger.android.support.DaggerAppCompatActivity;
 /**
  * Implementation of {@link com.minkov.demos.mvp.PersonDetails.PersonDetailsContacts.View}
  */
-public class PersonDetailsActivity extends DaggerAppCompatActivity {
+public class PersonDetailsActivity extends BaseActivity {
     /**
      * Value for setting values in intents
      */
@@ -37,5 +39,12 @@ public class PersonDetailsActivity extends DaggerAppCompatActivity {
                 .beginTransaction()
                 .replace(R.id.frame_content, mView)
                 .commit();
+
+        setupDrawer();
+    }
+
+    @Override
+    protected Toolbar getToolbar() {
+        return findViewById(R.id.toolbar);
     }
 }

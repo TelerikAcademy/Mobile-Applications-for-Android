@@ -4,6 +4,7 @@ import com.minkov.demos.mvp.PersonDetails.PersonDetailsActivity;
 import com.minkov.demos.mvp.PersonDetails.PersonDetailsModule;
 import com.minkov.demos.mvp.PersonsLists.PersonsListActivity;
 import com.minkov.demos.mvp.PersonsLists.PersonsListModule;
+import com.minkov.demos.mvp.Profile.ProfileActivity;
 
 import dagger.Module;
 import dagger.android.ContributesAndroidInjector;
@@ -34,4 +35,9 @@ public abstract class ActivityBindingModule {
     @ActivityScoped
     @ContributesAndroidInjector(modules = PersonDetailsModule.class)
     abstract PersonDetailsActivity personDetailsActivity();
+
+    @ActivityScoped
+    @ContributesAndroidInjector(modules = {
+    })
+    abstract ProfileActivity profileActivity();
 }

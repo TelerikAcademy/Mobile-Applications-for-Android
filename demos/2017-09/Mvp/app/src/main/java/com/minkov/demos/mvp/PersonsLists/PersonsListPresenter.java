@@ -55,7 +55,6 @@ public class PersonsListPresenter implements PersonsListContracts.Presenter {
                 : mHttpRepository.getAll();
 
         obs
-                .delay(15, TimeUnit.SECONDS)
                 .subscribeOn(mScheduleProvider.io())
                 .observeOn(mScheduleProvider.ui())
                 .subscribe(new Consumer<List<Person>>() {

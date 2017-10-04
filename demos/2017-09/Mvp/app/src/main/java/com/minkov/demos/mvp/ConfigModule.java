@@ -15,7 +15,10 @@ public class ConfigModule {
     // private static final String BASE_URL = "http://192.168.160.7:3001/";
 
     // PC
-    private static final String BASE_URL = "http://192.168.168.44:3001/";
+//    private static final String BASE_URL = "http://192.168.168.44:3001/";
+
+    // Laptop
+    private static final String BASE_URL = "http://192.168.160.17:3001/";
 
     /**
      * Provide {@link String} named "base-url"

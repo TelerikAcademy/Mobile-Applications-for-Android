@@ -79,7 +79,7 @@ public class LoadingView extends RelativeLayout {
         lp.addRule(ALIGN_PARENT_END);
         mLoadingPane.setLayoutParams(lp);
 
-        View spinner = new ProgressBar(getContext());
+        View spinner = new SpinnerView(getContext());
         TextView label = new TextView(getContext());
         label.setText("Loading...");
         label.setTextColor(Color.parseColor("#ffffff"));
