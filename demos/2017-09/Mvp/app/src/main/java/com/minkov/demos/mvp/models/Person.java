@@ -12,13 +12,13 @@ import org.greenrobot.greendao.annotation.Property;
 
 @Entity(nameInDb = "person")
 public class Person {
-    //CHECKSTYLE:OFF
+    @SuppressWarnings("CheckStyle")
     @Id
     private String id;
 
+    @SuppressWarnings("CheckStyle")
     @Property(nameInDb = "name")
     private String name;
-    //CHECKSTYLE:ON
 
     /**
      * Empty constructor is necessary for GreenDao
@@ -35,6 +35,12 @@ public class Person {
         setName(name);
     }
 
+
+    /**
+     * Creates a Person instance
+     * @param id unique {@link String}
+     * @param name a {@link String}
+     */
     @Generated(hash = 376276960)
     public Person(String id, String name) {
         this.id = id;

@@ -8,8 +8,6 @@ import com.minkov.demos.mvp.R;
 
 import javax.inject.Inject;
 
-import dagger.android.support.DaggerAppCompatActivity;
-
 /**
  * Implementation of {@link com.minkov.demos.mvp.PersonDetails.PersonDetailsContacts.View}
  */
@@ -19,9 +17,11 @@ public class PersonDetailsActivity extends BaseActivity {
      */
     public static final String EXTRA_PERSON_KEY = "EXTRA_PERSON_ID";
 
+    @SuppressWarnings("CheckStyle")
     @Inject
     PersonDetailsContacts.Presenter mPresenter;
 
+    @SuppressWarnings("CheckStyle")
     PersonDetailsFragment mView;
 
     @Override
@@ -39,8 +39,6 @@ public class PersonDetailsActivity extends BaseActivity {
                 .beginTransaction()
                 .replace(R.id.frame_content, mView)
                 .commit();
-
-        setupDrawer();
     }
 
     @Override

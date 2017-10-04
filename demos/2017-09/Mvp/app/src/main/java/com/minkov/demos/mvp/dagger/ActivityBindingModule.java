@@ -10,6 +10,7 @@ import dagger.Module;
 import dagger.android.ContributesAndroidInjector;
 
 /**
+ * Module for setup of activities and their dependent modules
  * Created by minkov on 9/27/17.
  */
 
@@ -36,6 +37,10 @@ public abstract class ActivityBindingModule {
     @ContributesAndroidInjector(modules = PersonDetailsModule.class)
     abstract PersonDetailsActivity personDetailsActivity();
 
+    /**
+     * Config ProfileActivity
+     * @return Dagger initialized activity
+     */
     @ActivityScoped
     @ContributesAndroidInjector(modules = {
     })

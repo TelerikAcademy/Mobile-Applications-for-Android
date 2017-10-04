@@ -19,10 +19,12 @@ import javax.inject.Inject;
  */
 public class PersonsListActivity extends BaseActivity implements PersonsListContracts.Router {
     // CHECKSTYLE:OFF
+    @SuppressWarnings("CheckStyle")
     @Inject
     PersonsListContracts.Presenter mPersonsListPresenter;
     // CHECKSTYLE:ON
 
+    @SuppressWarnings("CheckStyle")
     @Inject
     PersonDetailsContacts.Presenter mPersonDetailsPresenter;
 
@@ -31,8 +33,8 @@ public class PersonsListActivity extends BaseActivity implements PersonsListCont
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_persons_list);
+        super.onCreate(savedInstanceState);
 
         mPersonsListView = PersonsListFragment.newInstance();
 
@@ -43,8 +45,6 @@ public class PersonsListActivity extends BaseActivity implements PersonsListCont
             mPersonDetailsView.setPresenter(mPersonDetailsPresenter);
             ActivityUtils.attachFragment(getSupportFragmentManager(), R.id.frame_details, mPersonDetailsView);
         }
-
-        setupDrawer();
     }
 
     @Override

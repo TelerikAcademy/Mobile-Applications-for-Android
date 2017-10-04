@@ -1,6 +1,7 @@
 package com.minkov.demos.mvp;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
@@ -15,24 +16,21 @@ import com.minkov.demos.mvp.Profile.ProfileActivity;
 
 import dagger.android.support.DaggerAppCompatActivity;
 
+/**
+ * Base activity for providing drawer functionality
+ */
 public abstract class BaseActivity extends DaggerAppCompatActivity implements Drawer.OnDrawerItemClickListener {
 
     private static final String EXTRA_IDENTIFIER = "EXTRA_IDENTIFIER";
-    private final IDrawerItem[] mItems;
     private Drawer mDrawer;
 
-    public BaseActivity() {
-        mItems = new IDrawerItem[]{
-                new PrimaryDrawerItem()
-                        .withIdentifier(1)
-                        .withName("Persons List"),
-                new PrimaryDrawerItem()
-                        .withIdentifier(2)
-                        .withName("Profile"),
-        };
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setupDrawer();
     }
 
-    protected void setupDrawer() {
+    private void setupDrawer() {
         Intent intent = getIntent();
         long currentIdentifier = intent.getLongExtra(EXTRA_IDENTIFIER, 1);
 
@@ -78,6 +76,11 @@ public abstract class BaseActivity extends DaggerAppCompatActivity implements Dr
 
     }
 
+    /**
+     * Method for providing toolbar for drawer button
+     *
+     * @return the toolbar element of the view
+     */
     protected abstract Toolbar getToolbar();
 
     @Override
@@ -94,6 +97,8 @@ public abstract class BaseActivity extends DaggerAppCompatActivity implements Dr
             case 2:
                 intent = new Intent(this, ProfileActivity.class);
                 break;
+            default:
+                return false;
         }
 
         intent.putExtra(EXTRA_IDENTIFIER, drawerItem.getIdentifier());

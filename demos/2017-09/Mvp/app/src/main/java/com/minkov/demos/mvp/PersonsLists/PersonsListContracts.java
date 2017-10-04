@@ -21,7 +21,14 @@ public interface PersonsListContracts {
          */
         void setPersons(Person[] persons);
 
+        /**
+         * Show loading screen
+         */
         void showLoadingScreen();
+
+        /**
+         * Hide loading screen
+         */
         void hideLoadingScreen();
     }
 

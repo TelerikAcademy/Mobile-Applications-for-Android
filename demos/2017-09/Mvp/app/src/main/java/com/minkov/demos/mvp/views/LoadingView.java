@@ -6,17 +6,25 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.minkov.demos.mvp.R;
 
+/**
+ * LoadingScreen view
+ * Has a header and loading text
+ */
 public class LoadingView extends RelativeLayout {
     private ViewGroup mBackground;
     private ViewGroup mLoadingPane;
     private int mPaneHeight;
 
+    /**
+     * Initializes an instance
+     *
+     * @param context application context
+     */
     public LoadingView(Context context) {
         super(context);
         init();
@@ -79,7 +87,8 @@ public class LoadingView extends RelativeLayout {
         lp.addRule(ALIGN_PARENT_END);
         mLoadingPane.setLayoutParams(lp);
 
-        View spinner = new SpinnerView(getContext());
+        SpinnerView spinner = new SpinnerView(getContext());
+//        spinner.setLoaderType(SpinnerView.LoaderType.Pacman);
         TextView label = new TextView(getContext());
         label.setText("Loading...");
         label.setTextColor(Color.parseColor("#ffffff"));
