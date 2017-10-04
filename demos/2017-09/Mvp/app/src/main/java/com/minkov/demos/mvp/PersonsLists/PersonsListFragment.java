@@ -16,6 +16,7 @@ import android.widget.TextView;
 
 import com.minkov.demos.mvp.R;
 import com.minkov.demos.mvp.models.Person;
+import com.minkov.demos.mvp.ui.ViewUtils;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -25,6 +26,8 @@ public class PersonsListFragment extends Fragment
     private ListView mListViewPersons;
     private ArrayAdapter<Person> mPersonsAdapter;
     private PersonsListContracts.Presenter mPresenter;
+    private ViewGroup mContentContainer;
+    private ViewGroup mLoadingScreenContainer;
 
     /**
      * Empty constructor is mandatory for fragments
@@ -46,6 +49,9 @@ public class PersonsListFragment extends Fragment
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_persons_list, container, false);
+
+        mLoadingScreenContainer = root.findViewById(R.id.container_loading_screen);
+        mContentContainer = root.findViewById(R.id.container_content);
 
         mPersonsAdapter = new ArrayAdapter<Person>(getContext(), android.R.layout.simple_list_item_1) {
             @NonNull
@@ -84,6 +90,16 @@ public class PersonsListFragment extends Fragment
     public void setPersons(Person[] persons) {
         mPersonsAdapter.clear();
         mPersonsAdapter.addAll(persons);
+    }
+
+    @Override
+    public void showLoadingScreen() {
+        ViewUtils.showLoadingScreen(getContext(), mContentContainer, mLoadingScreenContainer);
+    }
+
+    @Override
+    public void hideLoadingScreen() {
+        ViewUtils.hideLoadingScreen(mContentContainer, mLoadingScreenContainer);
     }
 
     @Override

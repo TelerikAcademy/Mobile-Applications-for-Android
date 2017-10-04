@@ -20,6 +20,9 @@ public interface PersonsListContracts {
          * @param persons array of objects to visualize
          */
         void setPersons(Person[] persons);
+
+        void showLoadingScreen();
+        void hideLoadingScreen();
     }
 
     /**

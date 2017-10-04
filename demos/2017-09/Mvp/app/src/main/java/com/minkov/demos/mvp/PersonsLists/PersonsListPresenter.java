@@ -5,6 +5,7 @@ import com.minkov.demos.mvp.repositories.base.BaseRepository;
 import com.minkov.demos.mvp.utils.schedulers.BaseSchedulerProvider;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import io.reactivex.Observable;
 import io.reactivex.functions.Consumer;
@@ -48,11 +49,14 @@ public class PersonsListPresenter implements PersonsListContracts.Presenter {
     }
 
     private void load() {
+        mView.showLoadingScreen();
         Observable obs = mHasCache
                 ? mCacheRepository.getAll()
                 : mHttpRepository.getAll();
 
-        obs.subscribeOn(mScheduleProvider.io())
+        obs
+                .delay(15, TimeUnit.SECONDS)
+                .subscribeOn(mScheduleProvider.io())
                 .observeOn(mScheduleProvider.ui())
                 .subscribe(new Consumer<List<Person>>() {
                     @Override
@@ -69,6 +73,7 @@ public class PersonsListPresenter implements PersonsListContracts.Presenter {
                             }
                         }
                         mHasCache = true;
+                        mView.hideLoadingScreen();
                     }
                 }, new Consumer<Throwable>() {
                     @Override
