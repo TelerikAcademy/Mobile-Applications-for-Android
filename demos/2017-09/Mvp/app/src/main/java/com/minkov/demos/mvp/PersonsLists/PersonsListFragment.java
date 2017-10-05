@@ -94,7 +94,7 @@ public class PersonsListFragment extends Fragment
 
     @Override
     public void showLoadingScreen() {
-        ViewUtils.showLoadingScreen(getContext(), mContentContainer, mLoadingScreenContainer);
+        ViewUtils.showLoadingScreen(getContext(), mContentContainer, mLoadingScreenContainer, "Loading People");
     }
 
     @Override

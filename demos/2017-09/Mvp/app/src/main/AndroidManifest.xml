@@ -3,6 +3,7 @@
     package="com.minkov.demos.mvp">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
         android:name=".PersonsApplication"
@@ -11,6 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.NoActionBar">
+
         <activity android:name=".PersonsLists.PersonsListActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,7 +20,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".PersonDetails.PersonDetailsActivity"></activity>
+        <activity android:name=".PersonDetails.PersonDetailsActivity" />
 
         <meta-data
             android:name="DATABASE"
@@ -33,7 +35,7 @@
             android:name="DOMAIN_PACKAGE_NAME"
             android:value="com.minkov.demos" />
 
-        <activity android:name=".Profile.ProfileActivity"></activity>
+        <activity android:name=".Profile.ProfileActivity" />
+        <activity android:name=".Location.LocationActivity" />
     </application>
-
 </manifest>

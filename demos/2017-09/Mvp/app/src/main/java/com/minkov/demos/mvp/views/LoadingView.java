@@ -2,10 +2,10 @@ package com.minkov.demos.mvp.views;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.os.Handler;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -18,6 +18,10 @@ import com.minkov.demos.mvp.R;
 public class LoadingView extends RelativeLayout {
     private ViewGroup mBackground;
     private ViewGroup mLoadingPane;
+
+    private TextView mLabel;
+    private SpinnerView mSpinner;
+
     private int mPaneHeight;
 
     /**
@@ -71,7 +75,7 @@ public class LoadingView extends RelativeLayout {
     }
 
     private void initLoadingPane() {
-        mLoadingPane = new LinearLayout(getContext());
+        mLoadingPane = new RelativeLayout(getContext());
         mLoadingPane.setBackgroundColor(Color.parseColor("#000000"));
         mLoadingPane.getBackground()
                 .setAlpha(70);
@@ -87,42 +91,88 @@ public class LoadingView extends RelativeLayout {
         lp.addRule(ALIGN_PARENT_END);
         mLoadingPane.setLayoutParams(lp);
 
-        SpinnerView spinner = new SpinnerView(getContext());
-//        spinner.setLoaderType(SpinnerView.LoaderType.Pacman);
-        TextView label = new TextView(getContext());
-        label.setText("Loading...");
-        label.setTextColor(Color.parseColor("#ffffff"));
-        label.setTextSize(18);
+        mSpinner = buildSpinner();
+        mLabel = buildLoadingTextView();
 
-        ViewGroup.LayoutParams lpChildren = new ViewGroup.LayoutParams(
-                mPaneHeight,
-                mPaneHeight
-        );
-
-        spinner.setLayoutParams(lpChildren);
-        label.setLayoutParams(lpChildren);
-
-        mLoadingPane.addView(spinner);
-        mLoadingPane.addView(label);
+        mLoadingPane.addView(mSpinner);
+        mLoadingPane.addView(mLabel);
 
         addView(mLoadingPane);
     }
 
-//    @Override
-//    protected void onSizeChanged(int w, int h, int oldw, int oldh) {
-//        super.onSizeChanged(w, h, oldw, oldh);
-//        mPaneHeight = h / 10;
-////        initLoadingPane();
-//        LayoutParams lp = new LayoutParams(
-//                ViewGroup.LayoutParams.MATCH_PARENT,
-//                mPaneHeight);
-//
-//        lp.addRule(ALIGN_PARENT_LEFT);
-//        lp.addRule(ALIGN_PARENT_START);
-//        lp.addRule(ALIGN_PARENT_BOTTOM);
-//        lp.addRule(ALIGN_PARENT_RIGHT);
-//        lp.addRule(ALIGN_PARENT_END);
-//        mLoadingPane.setLayoutParams(lp);
-//
-//    }
+    private TextView buildLoadingTextView() {
+        TextView label = new TextView(getContext());
+        label.setText("Loading...");
+        label.setTextColor(Color.parseColor("#ffffff"));
+        label.setTextSize(18);
+        label.setPadding(25, 0, 0, 0);
+
+        LayoutParams lp = new LayoutParams(
+                ViewGroup.LayoutParams.WRAP_CONTENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT);
+        lp.addRule(RelativeLayout.CENTER_IN_PARENT);
+        lp.addRule(RIGHT_OF, R.id.spinner);
+        label.setLayoutParams(lp);
+        return label;
+    }
+
+    private SpinnerView buildSpinner() {
+        SpinnerView spinner = new SpinnerView(getContext());
+        spinner.setId(R.id.spinner);
+//        spinner.setLoaderType(SpinnerView.LoaderType.Pacman);
+        spinner.setColor("#FFE100");
+
+        LayoutParams lp = new LayoutParams(
+                mPaneHeight,
+                mPaneHeight);
+
+        lp.addRule(ALIGN_PARENT_START);
+        lp.addRule(ALIGN_PARENT_LEFT);
+
+        spinner.setLayoutParams(lp);
+
+        return spinner;
+    }
+
+    @Override
+    protected void onSizeChanged(int w, int h, int oldw, int oldh) {
+        super.onSizeChanged(w, h, oldw, oldh);
+        mPaneHeight = h / 8;
+
+        ViewGroup.LayoutParams lp = mLoadingPane.getLayoutParams();
+        lp.height = mPaneHeight;
+        mLoadingPane.setLayoutParams(lp);
+
+        ViewGroup.LayoutParams lp2 = mSpinner.getLayoutParams();
+        lp2.height = mPaneHeight;
+        lp2.width = mPaneHeight;
+        mSpinner.setLayoutParams(lp2);
+
+        Handler handler = new Handler();
+        handler.post(new Runnable() {
+            @Override
+            public void run() {
+                requestLayout();
+                mSpinner.requestLayout();
+            }
+        });
+    }
+
+    /**
+     * Sets the color of the spinner
+     *
+     * @param color a #RRGGBB value
+     */
+    public void setColor(String color) {
+        mSpinner.setColor(color);
+    }
+
+    /**
+     * Sets the text of the label
+     *
+     * @param text a {@link String}
+     */
+    public void setText(String text) {
+        mLabel.setText(text);
+    }
 }

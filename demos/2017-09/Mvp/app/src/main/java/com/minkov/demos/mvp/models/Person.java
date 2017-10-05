@@ -36,11 +36,6 @@ public class Person {
     }
 
 
-    /**
-     * Creates a Person instance
-     * @param id unique {@link String}
-     * @param name a {@link String}
-     */
     @Generated(hash = 376276960)
     public Person(String id, String name) {
         this.id = id;

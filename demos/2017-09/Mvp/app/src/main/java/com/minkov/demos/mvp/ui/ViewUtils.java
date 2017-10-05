@@ -24,9 +24,27 @@ public final class ViewUtils {
             Context context,
             View contentContainer,
             ViewGroup loadingContainer) {
+        showLoadingScreen(context, contentContainer, loadingContainer, null);
+    }
 
-//        View spinner = new ProgressBar(context);
-        View spinner = new LoadingView(context);
+    /**
+     * Shows a loading screen
+     *
+     * @param context          application context
+     * @param contentContainer the container that must be hidden
+     * @param loadingContainer the container where the loader should appear
+     * @param text             Text shown in the loading screen
+     */
+    public static void showLoadingScreen(
+            Context context,
+            View contentContainer,
+            ViewGroup loadingContainer,
+            String text) {
+
+        LoadingView spinner = new LoadingView(context);
+        if (text != null) {
+            spinner.setText(text);
+        }
         loadingContainer.removeAllViews();
         loadingContainer.addView(spinner);
 

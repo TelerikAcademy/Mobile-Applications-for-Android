@@ -4,7 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 
-import com.minkov.demos.mvp.BaseActivity;
+import com.minkov.demos.mvp.base.BaseDrawerActivity;
 import com.minkov.demos.mvp.PersonDetails.PersonDetailsActivity;
 import com.minkov.demos.mvp.PersonDetails.PersonDetailsContacts;
 import com.minkov.demos.mvp.PersonDetails.PersonDetailsFragment;
@@ -17,7 +17,7 @@ import javax.inject.Inject;
 /**
  * The implementation of the {@link com.minkov.demos.mvp.PersonsLists.PersonsListContracts.View} class
  */
-public class PersonsListActivity extends BaseActivity implements PersonsListContracts.Router {
+public class PersonsListActivity extends BaseDrawerActivity implements PersonsListContracts.Router {
     // CHECKSTYLE:OFF
     @SuppressWarnings("CheckStyle")
     @Inject

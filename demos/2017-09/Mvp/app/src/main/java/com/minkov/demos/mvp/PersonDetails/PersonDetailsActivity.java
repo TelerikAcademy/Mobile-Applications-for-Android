@@ -3,7 +3,7 @@ package com.minkov.demos.mvp.PersonDetails;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 
-import com.minkov.demos.mvp.BaseActivity;
+import com.minkov.demos.mvp.base.BaseDrawerActivity;
 import com.minkov.demos.mvp.R;
 
 import javax.inject.Inject;
@@ -11,7 +11,7 @@ import javax.inject.Inject;
 /**
  * Implementation of {@link com.minkov.demos.mvp.PersonDetails.PersonDetailsContacts.View}
  */
-public class PersonDetailsActivity extends BaseActivity {
+public class PersonDetailsActivity extends BaseDrawerActivity {
     /**
      * Value for setting values in intents
      */

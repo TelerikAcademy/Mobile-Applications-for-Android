@@ -1,5 +1,7 @@
 package com.minkov.demos.mvp.dagger;
 
+import com.minkov.demos.mvp.Location.LocationActivity;
+import com.minkov.demos.mvp.Location.LocationModule;
 import com.minkov.demos.mvp.PersonDetails.PersonDetailsActivity;
 import com.minkov.demos.mvp.PersonDetails.PersonDetailsModule;
 import com.minkov.demos.mvp.PersonsLists.PersonsListActivity;
@@ -18,7 +20,8 @@ import dagger.android.ContributesAndroidInjector;
 public abstract class ActivityBindingModule {
 
     /**
-     * Config PersonsListActivity
+     * Config {@link PersonsListActivity}
+     *
      * @return Dagger initialized activity
      */
 
@@ -30,7 +33,8 @@ public abstract class ActivityBindingModule {
     abstract PersonsListActivity personsListActivity();
 
     /**
-     * Config PersonDetailsActivity
+     * Config {@link PersonDetailsActivity}
+     *
      * @return Dagger initialized activity
      */
     @ActivityScoped
@@ -38,11 +42,23 @@ public abstract class ActivityBindingModule {
     abstract PersonDetailsActivity personDetailsActivity();
 
     /**
-     * Config ProfileActivity
+     * Config {@link ProfileActivity}
+     *
      * @return Dagger initialized activity
      */
     @ActivityScoped
     @ContributesAndroidInjector(modules = {
     })
     abstract ProfileActivity profileActivity();
+
+    /**
+     * Config {@link LocationActivity}
+     *
+     * @return Dagger initialized activity
+     */
+    @ActivityScoped
+    @ContributesAndroidInjector(modules = {
+            LocationModule.class
+    })
+    abstract LocationActivity locationActivity();
 }

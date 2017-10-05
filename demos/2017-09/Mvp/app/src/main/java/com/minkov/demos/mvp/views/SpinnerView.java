@@ -74,8 +74,10 @@ public class SpinnerView extends View {
             mCircleAngle = 0;
             mIsPacmanOpen = true;
         }
+
         mIsFirst = false;
 
+//        canvas.drawColor(0, PorterDuff.Mode.CLEAR);
         switch (mLoaderType) {
             case Pacman:
                 drawPacman(canvas);
@@ -94,7 +96,6 @@ public class SpinnerView extends View {
         float toAngle = fromAngle + ANGLE_OFFSET;
         toAngle %= 360;
 
-        canvas.drawColor(0, PorterDuff.Mode.CLEAR);
         canvas.drawArc(mBounds, fromAngle, toAngle, false, mCirclePaint);
 
         // continue animation
@@ -105,7 +106,6 @@ public class SpinnerView extends View {
     private void drawPacman(Canvas canvas) {
         float fromAngle = 0.0f;
         float toAngle = 360.0f;
-        canvas.drawColor(0, PorterDuff.Mode.CLEAR);
 
         if (mIsPacmanOpen) {
             fromAngle = 30.0f;
@@ -128,7 +128,7 @@ public class SpinnerView extends View {
         float actualHeight = w - getPaddingTop() - getPaddingBottom();
         float d = Math.min(actualHeight, actualWidth);
 
-        float offset = 55;
+        float offset = 30;
 
         mBounds = new RectF(
                 0.0f + offset,
@@ -154,6 +154,7 @@ public class SpinnerView extends View {
     public void setColor(String color) {
         this.mColor = color;
         mCirclePaint.setColor(Color.parseColor(mColor));
+        mPacmanPaint.setColor(Color.parseColor(mColor));
     }
 
     /**
