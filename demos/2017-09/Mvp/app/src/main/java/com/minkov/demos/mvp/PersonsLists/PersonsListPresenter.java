@@ -21,9 +21,9 @@ public class PersonsListPresenter implements PersonsListContracts.Presenter {
     private final BaseSchedulerProvider mScheduleProvider;
 
     private PersonsListContracts.View mView;
-    private Person[] mPersons;
     private PersonsListContracts.Router mRouter;
-    private boolean mHasCache;
+
+    private PersonsListContracts.ViewState mViewState;
 
     /**
      * Creates a {@link PersonsListPresenter} instance
@@ -49,7 +49,7 @@ public class PersonsListPresenter implements PersonsListContracts.Presenter {
 
     private void load() {
         mView.showLoadingScreen();
-        Observable<List<Person>> observable = mHasCache
+        Observable<List<Person>> observable = mViewState.getHasCache()
                 ? mCacheRepository.getAll()
                 : mHttpRepository.getAll();
 
@@ -59,19 +59,10 @@ public class PersonsListPresenter implements PersonsListContracts.Presenter {
                 .subscribe(new Consumer<List<Person>>() {
                     @Override
                     public void accept(List<Person> persons) throws Exception {
-                        mPersons = new Person[persons.size()];
-                        for (int i = 0; i < mPersons.length; i++) {
-                            mPersons[i] = persons.get(i);
-                        }
-
-                        mView.setPersons(mPersons);
-                        if (mHasCache) {
-                            for (Person p
-                                    : persons) {
-                                mCacheRepository.add(p);
-                            }
-                        }
-                        mHasCache = true;
+                        mViewState.setPersons(persons);
+                        mViewState.setHasCache(true);
+                        updateCache();
+                        mView.setPersons(mViewState.getPersons());
                         mView.hideLoadingScreen();
                     }
                 }, new Consumer<Throwable>() {
@@ -82,6 +73,14 @@ public class PersonsListPresenter implements PersonsListContracts.Presenter {
                 });
     }
 
+    private void updateCache() {
+        mCacheRepository.clear();
+        for (Person person
+                : mViewState.getPersons()) {
+            mCacheRepository.add(person);
+        }
+    }
+
     @Override
     public void unsubscribe() {
         mView = null;
@@ -89,11 +88,21 @@ public class PersonsListPresenter implements PersonsListContracts.Presenter {
 
     @Override
     public void onPersonSelect(int index) {
-        mRouter.showDetails(mPersons[index]);
+        mRouter.showDetails(mViewState.getPersons().get(index));
     }
 
     @Override
     public void setRouter(PersonsListContracts.Router router) {
         mRouter = router;
+    }
+
+    @Override
+    public void setViewState(PersonsListContracts.ViewState viewState) {
+        mViewState = viewState;
+    }
+
+    @Override
+    public PersonsListContracts.ViewState getViewState() {
+        return mViewState;
     }
 }

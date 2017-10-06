@@ -1,5 +1,9 @@
 package com.minkov.demos.mvp;
 
+import android.content.Context;
+
+import com.minkov.demos.mvp.base.CurrentActivityProvider;
+
 import javax.inject.Named;
 
 import dagger.Module;
@@ -22,11 +26,17 @@ public class ConfigModule {
 
     /**
      * Provide {@link String} named "base-url"
+     *
      * @return the url base of the RESTfull api
      */
     @Provides
     @Named("base-url")
     String providesBaseUrl() {
         return BASE_URL;
+    }
+
+    @Provides
+    CurrentActivityProvider providesCurrentActivityProvider(Context context) {
+        return ((PersonsApplication) context.getApplicationContext());
     }
 }

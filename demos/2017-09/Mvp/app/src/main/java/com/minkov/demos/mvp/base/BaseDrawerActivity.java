@@ -1,4 +1,4 @@
-package com.minkov.demos.mvp;
+package com.minkov.demos.mvp.base;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,10 +7,12 @@ import android.view.View;
 
 import com.mikepenz.materialdrawer.Drawer;
 import com.mikepenz.materialdrawer.DrawerBuilder;
+import com.mikepenz.materialdrawer.model.ExpandableDrawerItem;
 import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
 import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
 import com.mikepenz.materialdrawer.model.SectionDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
+import com.minkov.demos.mvp.Locations.LocationsActivity;
 import com.minkov.demos.mvp.PersonsLists.PersonsListActivity;
 import com.minkov.demos.mvp.Profile.ProfileActivity;
 
@@ -19,7 +21,7 @@ import dagger.android.support.DaggerAppCompatActivity;
 /**
  * Base activity for providing drawer functionality
  */
-public abstract class BaseActivity extends DaggerAppCompatActivity implements Drawer.OnDrawerItemClickListener {
+public abstract class BaseDrawerActivity extends BaseActivity implements Drawer.OnDrawerItemClickListener {
 
     private static final String EXTRA_IDENTIFIER = "EXTRA_IDENTIFIER";
     private Drawer mDrawer;
@@ -38,33 +40,17 @@ public abstract class BaseActivity extends DaggerAppCompatActivity implements Dr
         mDrawer = new DrawerBuilder()
                 .withActivity(this)
                 .withToolbar(toolbar)
-//                .withHeader(new LoadingView(this))
-//                .addDrawerItems(mItems)
-
                 .addDrawerItems(new PrimaryDrawerItem()
-                                .withIdentifier(1)
-                                .withName("Persons List"),
-                        new PrimaryDrawerItem()
-                                .withIdentifier(3)
-                                .withName("Persons List")
-                                .withIcon(android.R.drawable.ic_btn_speak_now),
-                        new SectionDrawerItem()
-                                .withName("Secondary")
-                                .withSubItems(
-                                        new PrimaryDrawerItem()
-                                                .withIdentifier(4)
-                                                .withName("Persons List"),
-                                        new PrimaryDrawerItem()
-                                                .withIdentifier(5)
-                                                .withName("Persons List"),
-                                        new SecondaryDrawerItem()
-                                                .withIdentifier(6)
-                                                .withName("Persons List"),
-                                        new PrimaryDrawerItem()
-                                                .withIdentifier(7)
-                                                .withName("Persons List")
-                                )
+                        .withIdentifier(1)
+                        .withName("Persons List")
                 )
+                .addDrawerItems(new ExpandableDrawerItem()
+                        .withName("APIs")
+                        .withSubItems(
+                                new SecondaryDrawerItem()
+                                        .withIdentifier(3)
+                                        .withName("Location")
+                        ))
                 .addStickyDrawerItems(
                         new PrimaryDrawerItem()
                                 .withIdentifier(2)
@@ -96,6 +82,9 @@ public abstract class BaseActivity extends DaggerAppCompatActivity implements Dr
                 break;
             case 2:
                 intent = new Intent(this, ProfileActivity.class);
+                break;
+            case 3:
+                intent = new Intent(this, LocationsActivity.class);
                 break;
             default:
                 return false;

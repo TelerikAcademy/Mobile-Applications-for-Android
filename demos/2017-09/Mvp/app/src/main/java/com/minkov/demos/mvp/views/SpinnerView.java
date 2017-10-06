@@ -112,9 +112,7 @@ public class SpinnerView extends View {
             toAngle = 360 - 2 * fromAngle;
         }
 
-        if (mIsPacmanOpen) {
-            canvas.drawOval(mFoodBounds, mPacmanPaint);
-        }
+        canvas.drawOval(mFoodBounds, mPacmanPaint);
 
         canvas.drawArc(mBounds, fromAngle, toAngle, true, mPacmanPaint);
 

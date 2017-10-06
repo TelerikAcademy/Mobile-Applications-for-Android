@@ -3,6 +3,8 @@ package com.minkov.demos.mvp.PersonsLists;
 import com.minkov.demos.mvp.base.BaseContracts;
 import com.minkov.demos.mvp.models.Person;
 
+import java.util.List;
+
 /**
  * Contracts for PersonsList {@link com.minkov.demos.mvp.base.BaseContracts.View},
  * {@link com.minkov.demos.mvp.base.BaseContracts.Presenter} and
@@ -19,7 +21,7 @@ public interface PersonsListContracts {
          *
          * @param persons array of objects to visualize
          */
-        void setPersons(Person[] persons);
+        void setPersons(List<Person> persons);
 
         /**
          * Show loading screen
@@ -35,7 +37,7 @@ public interface PersonsListContracts {
     /**
      * Base presenter for PersonsList
      */
-    interface Presenter extends BaseContracts.Presenter<View> {
+    interface Presenter extends BaseContracts.ViewStatePresenter<View, ViewState> {
         /**
          * React on selection of a person object
          *
@@ -57,8 +59,19 @@ public interface PersonsListContracts {
     interface Router extends BaseContracts.Router {
         /**
          * Handle the navigation
+         *
          * @param obj the object to navigate with
          */
         void showDetails(Person obj);
+    }
+
+    interface ViewState extends BaseContracts.ViewState {
+        void setPersons(List<Person> persons);
+
+        List<Person> getPersons();
+
+        void setHasCache(boolean hasCache);
+
+        boolean getHasCache();
     }
 }

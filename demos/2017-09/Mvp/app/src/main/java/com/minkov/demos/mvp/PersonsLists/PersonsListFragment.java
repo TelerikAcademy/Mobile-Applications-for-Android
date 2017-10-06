@@ -18,6 +18,8 @@ import com.minkov.demos.mvp.R;
 import com.minkov.demos.mvp.models.Person;
 import com.minkov.demos.mvp.ui.ViewUtils;
 
+import java.util.List;
+
 /**
  * A simple {@link Fragment} subclass.
  */
@@ -87,7 +89,7 @@ public class PersonsListFragment extends Fragment
      *
      * @param persons array of objects to visualize
      */
-    public void setPersons(Person[] persons) {
+    public void setPersons(List<Person> persons) {
         mPersonsAdapter.clear();
         mPersonsAdapter.addAll(persons);
     }
@@ -112,14 +114,6 @@ public class PersonsListFragment extends Fragment
     public void onPause() {
         mPresenter.unsubscribe();
         super.onPause();
-    }
-
-    @Override
-    public void onDestroy() {
-//    mPersonsListPresenter = null;
-        super.onDestroy();
-        mPresenter.unsubscribe();
-        mPresenter = null;
     }
 
     @Override
